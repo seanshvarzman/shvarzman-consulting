@@ -5,19 +5,6 @@
       <stop offset="1" stop-color="#2D6CDF"/>
     </linearGradient>
   </defs>
-  <!-- rounded tile -->
   <rect width="64" height="64" rx="15" fill="url(#bg)"/>
-  <!-- headset band -->
-  <path d="M16 35a16 16 0 0 1 32 0" fill="none" stroke="#7FB0FF" stroke-width="4" stroke-linecap="round"/>
-  <!-- ear cups -->
-  <rect x="11" y="31" width="8" height="15" rx="4" fill="#7FB0FF"/>
-  <rect x="45" y="31" width="8" height="15" rx="4" fill="#7FB0FF"/>
-  <!-- mic boom + tip -->
-  <path d="M15 44q2 9 13 11" fill="none" stroke="#7FB0FF" stroke-width="3.4" stroke-linecap="round"/>
-  <circle cx="29" cy="55" r="3.6" fill="#7FB0FF"/>
-  <!-- happy agent face -->
-  <circle cx="32" cy="37" r="15" fill="#1E4C6E"/>
-  <circle cx="26" cy="34" r="2.2" fill="#9FD8FF"/>
-  <circle cx="38" cy="34" r="2.2" fill="#9FD8FF"/>
-  <path d="M25 41q7 7 14 0" fill="none" stroke="#5BE6A8" stroke-width="3" stroke-linecap="round"/>
+  <text x="32" y="33" fill="#FFFFFF" font-family="'Sora','Segoe UI',sans-serif" font-size="34" font-weight="800" letter-spacing="-1" text-anchor="middle" dominant-baseline="central">SS</text>
 </svg>
