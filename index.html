@@ -164,7 +164,8 @@
   @media(hover:hover){.node:hover .ring{transform:scale(1.1)}}
   .node:active .ring{transform:scale(1.1)}
   .node.done .ring{background:var(--green);border-color:var(--green);color:#fff}
-  .node .nlabel{font-family:'Sora';font-weight:600;font-size:.8rem;color:var(--ink);line-height:1.2}
+  /* reserve 2 lines for every label so one- and two-line nodes are the same height (visual balance) */
+  .node .nlabel{font-family:'Sora';font-weight:600;font-size:.8rem;color:var(--ink);line-height:1.2;min-height:2.4em;display:flex;align-items:flex-start;justify-content:center}
   .cycle .spin{position:absolute;inset:0;animation:rot 28s linear infinite}
   @keyframes rot{to{transform:rotate(360deg)}}
   @media(prefers-reduced-motion:reduce){.cycle .spin{animation:none}}
