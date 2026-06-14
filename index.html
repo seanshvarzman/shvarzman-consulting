@@ -188,11 +188,9 @@
   .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
   @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
   /* SCENE entrance: slide in from each side */
-  .scene-card.before.reveal{transform:translateX(-40px) translateY(10px)}
-  .scene-card.after.reveal{transform:translateX(40px) translateY(10px)}
+  /* vertical-only slide-in: a horizontal offset overflowed the viewport at some widths */
+  .scene-card.before.reveal,.scene-card.after.reveal{transform:translateY(22px)}
   .scene-card.before.reveal.in,.scene-card.after.reveal.in{transform:none}
-  /* mobile: vertical-only slide-in so the horizontal offset can't overflow the viewport */
-  @media(max-width:780px){.scene-card.before.reveal,.scene-card.after.reveal{transform:translateY(20px)}}
   /* SCENE hover: lift + subtle zoom */
   .scene-card{transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s,border-color .3s,opacity .7s cubic-bezier(.22,1,.36,1)}
   /* faces pop on card hover */
