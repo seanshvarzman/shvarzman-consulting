@@ -19,8 +19,8 @@
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:'Inter',system-ui,sans-serif;color:var(--slate);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
-  .eng-card,.scene-card,.client,.node,.logo-cell,.btn{-webkit-tap-highlight-color:transparent}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--slate);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent;overflow-x:clip}
+  .eng-card,.scene-card,.client,.node,.logo-cell,.btn{-webkit-tap-highlight-color:transparent;cursor:pointer}
   h1,h2,h3{font-family:'Sora',sans-serif;color:var(--ink);letter-spacing:-.02em;line-height:1.12}
   .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
   a{text-decoration:none;color:inherit}
@@ -155,8 +155,12 @@
   .tint{background:var(--mist)}
   .logos{padding:42px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
   .logos .cap{text-align:center;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--slate-soft);font-weight:600;margin-bottom:28px}
-  .marquee{position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
-  .marquee-track{display:flex;gap:20px;width:max-content;animation:scroll 30s linear infinite}
+  .marquee{position:relative;overflow:hidden}
+  /* edge fade via overlays (iOS-safe; -webkit-mask + animation can render blank on Safari) */
+  .marquee::before,.marquee::after{content:"";position:absolute;top:0;bottom:0;width:48px;z-index:2;pointer-events:none}
+  .marquee::before{left:0;background:linear-gradient(90deg,#fff,rgba(255,255,255,0))}
+  .marquee::after{right:0;background:linear-gradient(270deg,#fff,rgba(255,255,255,0))}
+  .marquee-track{display:flex;gap:20px;width:max-content;animation:scroll 30s linear infinite;will-change:transform;transform:translateZ(0)}
   .marquee:hover .marquee-track{animation-play-state:paused}
   @keyframes scroll{to{transform:translateX(-50%)}}
   .logo-cell{flex:0 0 auto;display:flex;align-items:center;justify-content:center;height:92px;width:210px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 28px}
@@ -598,6 +602,8 @@
 </footer>
 
 <script>
+  // iOS Safari only fires :active on tap if a touch listener exists on the document
+  document.addEventListener('touchstart', function(){}, {passive:true});
   const techs = [
     {name:"Salesforce", logo:""},{name:"AWS Connect", logo:""},{name:"Genesys", logo:""},
     {name:"Five9", logo:""},{name:"NICE CXone", logo:""},{name:"Talkdesk", logo:""},
