@@ -6,5 +6,9 @@
     </linearGradient>
   </defs>
   <rect width="64" height="64" rx="15" fill="url(#bg)"/>
-  <text x="32" y="33" fill="#FFFFFF" font-family="'Sora','Segoe UI',sans-serif" font-size="34" font-weight="800" letter-spacing="-1" text-anchor="middle" dominant-baseline="central">SS</text>
+  <text x="32" y="32" fill="#FFFFFF"
+        font-family="Arial Black, Arial, Helvetica, sans-serif"
+        font-size="32" font-weight="900" letter-spacing="-2"
+        text-anchor="middle" dominant-baseline="central"
+        paint-order="stroke" stroke="#FFFFFF" stroke-width="1.2">SS</text>
 </svg>
