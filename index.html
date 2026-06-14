@@ -36,9 +36,7 @@
   .btn-primary{background:var(--azure);color:#fff;box-shadow:0 12px 28px -12px rgba(45,108,223,.65)}
   @media(hover:hover){.btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 34px -12px rgba(45,108,223,.7)}}
   .btn-primary:active{transform:translateY(0) scale(.98);box-shadow:0 10px 24px -12px rgba(45,108,223,.7)}
-  /* nav button: just change color on hover (no lift), text stays white & centered */
-  @media(hover:hover){.nav .btn-primary:hover{background:#1f57c9;transform:none;box-shadow:0 12px 28px -12px rgba(45,108,223,.65)}}
-  .nav .btn-primary:active{background:#1b4eb5;transform:none}
+  /* nav button matches the hero button exactly: blue, white text, lift on hover */
   .nav .btn{padding:10px 18px}
   @media(max-width:1000px){.nav-links{gap:20px;font-size:.9rem}}
   @media(max-width:860px){.nav-links{gap:14px}.nav .btn{padding:10px 14px}}
@@ -57,7 +55,12 @@
   .badge-card{position:absolute;bottom:-20px;left:-20px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:13px 17px;box-shadow:var(--shadow);max-width:215px}
   .badge-card .t{font-family:'Sora';font-weight:700;color:var(--ink);font-size:.9rem}
   .badge-card .s{font-size:.78rem;color:var(--slate-soft);margin-top:2px}
-  @media(max-width:880px){.hero-grid{grid-template-columns:1fr;gap:32px;padding:20px 0 28px}.portrait-frame{max-width:340px;margin:0 auto}}
+  @media(max-width:880px){
+    .hero-grid{grid-template-columns:1fr;gap:32px;padding:20px 0 28px;text-align:center}
+    .portrait-frame{max-width:340px;margin:0 auto}
+    .hero p.lead{margin-left:auto;margin-right:auto}
+    .hero-cta{justify-content:center}
+  }
   .roi-hero{background:var(--ink);color:#fff;padding:64px 0}
   .roi-hero h2{color:#fff;font-size:clamp(1.6rem,3vw,2.2rem)}
   .roi-hero .sub{color:#9DB2CC;max-width:34em;font-size:1rem;margin:10px 0 40px}
