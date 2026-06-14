@@ -28,14 +28,20 @@
   .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
   .brand{display:flex;align-items:center;gap:11px;font-family:'Sora';font-weight:700;color:var(--ink);font-size:1.02rem}
   .brand .mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--steel),var(--azure));display:grid;place-items:center;color:#fff;font-size:.9rem;font-weight:800}
-  .nav-links{display:flex;gap:32px;align-items:center;font-size:.93rem;font-weight:500}
-  .nav-links a{color:var(--slate);transition:color .2s}
-  .nav-links a:hover{color:var(--azure)}
-  .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Sora';font-weight:600;font-size:.92rem;padding:12px 22px;border-radius:11px;transition:transform .2s,box-shadow .2s;cursor:pointer;border:none}
+  .nav-links{display:flex;flex-wrap:nowrap;gap:32px;align-items:center;font-size:.93rem;font-weight:500}
+  .nav-links a{color:var(--slate);transition:color .2s;white-space:nowrap}
+  @media(hover:hover){.nav-links a:not(.btn):hover{color:var(--azure)}}
+  .nav-links a:not(.btn):active{color:var(--azure)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;gap:8px;font-family:'Sora';font-weight:600;font-size:.92rem;padding:12px 22px;border-radius:11px;transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer;border:none}
   .btn-primary{background:var(--azure);color:#fff;box-shadow:0 12px 28px -12px rgba(45,108,223,.65)}
   @media(hover:hover){.btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 34px -12px rgba(45,108,223,.7)}}
   .btn-primary:active{transform:translateY(0) scale(.98);box-shadow:0 10px 24px -12px rgba(45,108,223,.7)}
+  /* nav button: just change color on hover (no lift), text stays white & centered */
+  @media(hover:hover){.nav .btn-primary:hover{background:#1f57c9;transform:none;box-shadow:0 12px 28px -12px rgba(45,108,223,.65)}}
+  .nav .btn-primary:active{background:#1b4eb5;transform:none}
   .nav .btn{padding:10px 18px}
+  @media(max-width:1000px){.nav-links{gap:20px;font-size:.9rem}}
+  @media(max-width:860px){.nav-links{gap:14px}.nav .btn{padding:10px 14px}}
   @media(max-width:760px){.nav-links a:not(.btn){display:none}}
   .hero{position:relative;overflow:hidden;background:radial-gradient(1100px 500px at 80% -10%,rgba(45,108,223,.10),transparent 60%),linear-gradient(180deg,#fff,var(--mist))}
   .hero-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:48px;align-items:center;padding:20px 0 24px}
