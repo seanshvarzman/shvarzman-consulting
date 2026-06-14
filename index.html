@@ -213,16 +213,10 @@
   @keyframes shake{0%,100%{transform:scale(1.12) rotate(0)}20%{transform:scale(1.12) rotate(-7deg)}40%{transform:scale(1.12) rotate(6deg)}60%{transform:scale(1.12) rotate(-4deg)}80%{transform:scale(1.12) rotate(3deg)}}
   @keyframes bounce{0%{transform:scale(1.12) translateY(0)}30%{transform:scale(1.2) translateY(-7px)}55%{transform:scale(1.14) translateY(0)}75%{transform:scale(1.17) translateY(-3px)}100%{transform:scale(1.12) translateY(0)}}
   @media(prefers-reduced-motion:reduce){.scene-card:hover{transform:none}.scene-card:hover .fig svg{transform:none;animation:none}}
-  /* KPI metrics zoom on card hover */
-  .scene-metrics{transition:transform .35s cubic-bezier(.34,1.56,.64,1),margin .35s ease;transform-origin:left center}
-  @media(hover:hover){
-    .scene-card:hover .scene-metrics{transform:scale(1.18);margin-top:20px}
-    .scene-card:hover .scene-metrics b{filter:brightness(1.25)}
-  }
+  /* KPI metrics brighten on card hover (no scale — scaling pushed the lines outside the card) */
+  @media(hover:hover){.scene-card:hover .scene-metrics b{filter:brightness(1.25)}}
   .scene-card:active .scene-metrics b{filter:brightness(1.25)}
-  .scene-metrics span{display:inline-block;transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
   .scene-metrics b{transition:filter .35s ease}
-  @media(prefers-reduced-motion:reduce){.scene-card:hover .scene-metrics{transform:none;margin-top:14px}}
   .cycle-copy h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:14px}
   .cycle-copy p{font-size:1.02rem;margin-bottom:14px}
   .cycle-copy .punch{font-family:'Sora';font-weight:700;color:var(--ink);font-size:1.05rem;border-left:3px solid var(--azure);padding-left:16px;margin-top:22px;line-height:1.4}
