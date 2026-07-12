@@ -31,7 +31,7 @@
   h1,h2,h3{font-family:'Sora',sans-serif;color:var(--ink);letter-spacing:-.02em;line-height:1.12}
   .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
   a{text-decoration:none;color:inherit}
-  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
   .brand{display:flex;align-items:center;gap:11px;font-family:'Sora';font-weight:700;color:var(--ink);font-size:1.02rem}
   .brand .mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--steel),var(--azure));display:grid;place-items:center;color:#fff;font-size:.9rem;font-weight:800}
@@ -49,7 +49,7 @@
   @media(max-width:860px){.nav-links{gap:14px}.nav .btn{padding:10px 14px}}
   @media(max-width:760px){.nav-links a:not(.btn){display:none}}
   .hero{position:relative;overflow:hidden;background:radial-gradient(1100px 500px at 80% -10%,rgba(45,108,223,.10),transparent 60%),linear-gradient(180deg,#fff,var(--mist))}
-  .hero-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:48px;align-items:center;padding:20px 0 24px}
+  .hero-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:48px;align-items:center;padding-top:20px;padding-bottom:24px}
   .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--azure);margin-bottom:20px}
   .eyebrow::before{content:"";width:24px;height:2px;background:var(--azure);border-radius:2px}
   .hero h1{font-size:clamp(2.3rem,4.8vw,3.4rem);font-weight:800}
@@ -63,7 +63,7 @@
   .badge-card .t{font-family:'Sora';font-weight:700;color:var(--ink);font-size:.9rem}
   .badge-card .s{font-size:.78rem;color:var(--slate-soft);margin-top:2px}
   @media(max-width:880px){
-    .hero-grid{grid-template-columns:1fr;gap:32px;padding:20px 0 28px;text-align:center}
+    .hero-grid{grid-template-columns:1fr;gap:32px;padding-top:20px;padding-bottom:28px;text-align:center}
     .portrait-frame{max-width:340px;margin:0 auto}
     .hero p.lead{margin-left:auto;margin-right:auto}
     .hero-cta{justify-content:center}
@@ -303,7 +303,7 @@
   @keyframes aiBlink{0%,100%{opacity:.25}50%{opacity:.9}}
   .ai-chip{align-self:center;margin-top:6px;background:#E1F5EE;color:#085041;font-family:'Sora';font-weight:600;font-size:.78rem;padding:7px 14px;border-radius:30px;opacity:0;transform:translateY(6px);transition:opacity .35s,transform .35s;text-align:center}
   .ai-chip.show{opacity:1;transform:none}
-  @media(max-width:880px){.ai-demo{margin:26px auto 0;width:calc(100% - 56px);max-width:390px}}
+  @media(max-width:880px){.ai-demo{margin:26px auto 0}}
   /* ROI CALCULATOR */
   .calc{max-width:760px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px 32px;box-shadow:0 18px 48px -30px rgba(11,31,51,.25)}
   .calc-controls{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
@@ -325,7 +325,7 @@
   .reveal-sec.in{opacity:1;transform:none}
   @media(prefers-reduced-motion:reduce){.reveal-sec{opacity:1;transform:none;transition:none}}
   /* STICKY BOOK PILL */
-  .book-pill{position:fixed;right:22px;bottom:22px;z-index:60;background:#1E3A5F;color:#fff;font-family:'Sora';font-weight:600;font-size:.9rem;padding:12px 22px;border-radius:999px;box-shadow:0 14px 34px -14px rgba(11,31,51,.55);opacity:0;transform:translateY(14px);pointer-events:none;transition:opacity .3s ease,transform .3s ease}
+  .book-pill{position:fixed;right:22px;bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:60;background:#1E3A5F;color:#fff;font-family:'Sora';font-weight:600;font-size:.9rem;padding:12px 22px;border-radius:999px;box-shadow:0 14px 34px -14px rgba(11,31,51,.55);opacity:0;transform:translateY(14px);pointer-events:none;transition:opacity .3s ease,transform .3s ease}
   .book-pill.on{opacity:1;transform:none;pointer-events:auto}
   @media(hover:hover){.book-pill:hover{background:#16324F}}
 </style>
