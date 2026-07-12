@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sean Shvarzman | Contact Center & Salesforce Transformation</title>
+<meta name="description" content="Contact center, AI & Salesforce transformation. Strategy and hands-on delivery from one consultant — Service Cloud, Agentforce AI, and CCaaS, measured by results, not slides.">
+<meta property="og:title" content="Sean Shvarzman | Contact Center & Salesforce Transformation">
+<meta property="og:description" content="I bring big-firm consulting expertise and hands-on technical delivery. 30+ enterprise CX programs, $30M+ delivered. Measured by results, not slides.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shvarzmanconsulting.com">
+<meta property="og:image" content="https://shvarzmanconsulting.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="apple-touch-icon" href="favicon.svg">
 <meta name="theme-color" content="#1E3A5F">
@@ -268,6 +275,59 @@
   .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
   .foot .contact{font-size:.9rem;color:var(--slate-soft)}
   .foot .contact a{color:var(--azure);font-weight:500}
+  /* STATS FRAME NOTE */
+  .stats-note{text-align:center;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:#9DB2CC;opacity:.8;margin:-26px 0 20px}
+  /* ABOUT SEAN */
+  .about-wrap{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:start}
+  .about-photo{width:200px;height:200px;object-fit:cover;border-radius:22px;box-shadow:var(--shadow);display:block}
+  .about-copy h2{font-size:clamp(1.7rem,3.2vw,2.3rem);font-weight:700;margin-bottom:14px}
+  .about-copy .eyebrow{margin-bottom:14px}
+  .about-copy>p{font-size:1.02rem;color:var(--slate);max-width:44em}
+  .testimonial{margin-top:26px;border-left:3px solid #1E3A5F;padding:6px 0 6px 20px}
+  .testimonial p{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:1.05rem;color:var(--ink);margin:0}
+  .testimonial cite{display:block;margin-top:8px;font-size:.88rem;color:var(--slate-soft);font-style:normal}
+  @media(max-width:760px){.about-wrap{grid-template-columns:1fr;gap:28px}.about-photo{width:160px;height:160px;margin:0 auto}}
+  /* AI DEFLECTION DEMO */
+  .ai-demo{margin-top:26px;max-width:390px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 14px 34px -22px rgba(11,31,51,.35);overflow:hidden}
+  .ai-demo-head{display:flex;align-items:center;gap:8px;font-family:'Sora';font-weight:600;font-size:.78rem;color:var(--slate-soft);padding:10px 14px;border-bottom:1px solid var(--line);background:var(--mist)}
+  .ai-demo-head .dot{width:8px;height:8px;border-radius:50%;background:#378ADD;flex:0 0 auto}
+  .ai-demo-body{padding:14px;min-height:248px;display:flex;flex-direction:column;gap:8px}
+  .ai-msg{max-width:84%;padding:8px 12px;border-radius:12px;font-size:.86rem;line-height:1.45;opacity:0;transform:translateY(6px);transition:opacity .35s ease,transform .35s ease}
+  .ai-msg.show{opacity:1;transform:none}
+  .ai-msg.cust{align-self:flex-end;background:var(--cloud);color:var(--ink);border-bottom-right-radius:4px;text-align:left}
+  .ai-msg.bot{align-self:flex-start;background:#E6F1FB;color:#0C447C;border-bottom-left-radius:4px;text-align:left}
+  .ai-typing{align-self:flex-start;background:#E6F1FB;border-radius:12px;border-bottom-left-radius:4px;padding:11px 14px;display:flex;gap:4px;opacity:0;transition:opacity .25s}
+  .ai-typing.show{opacity:1}
+  .ai-typing i{width:6px;height:6px;border-radius:50%;background:#0C447C;animation:aiBlink 1s infinite}
+  .ai-typing i:nth-child(2){animation-delay:.15s}.ai-typing i:nth-child(3){animation-delay:.3s}
+  @keyframes aiBlink{0%,100%{opacity:.25}50%{opacity:.9}}
+  .ai-chip{align-self:center;margin-top:6px;background:#E1F5EE;color:#085041;font-family:'Sora';font-weight:600;font-size:.78rem;padding:7px 14px;border-radius:30px;opacity:0;transform:translateY(6px);transition:opacity .35s,transform .35s;text-align:center}
+  .ai-chip.show{opacity:1;transform:none}
+  @media(max-width:880px){.ai-demo{margin:26px auto 0;width:calc(100% - 56px);max-width:390px}}
+  /* ROI CALCULATOR */
+  .calc{max-width:760px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px 32px;box-shadow:0 18px 48px -30px rgba(11,31,51,.25)}
+  .calc-controls{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .calc-field label{display:flex;justify-content:space-between;align-items:baseline;font-family:'Sora';font-weight:600;font-size:.85rem;color:var(--ink);margin-bottom:10px;gap:10px}
+  .calc-field label b{color:#378ADD;font-weight:800;font-size:.95rem;white-space:nowrap}
+  .calc-field input[type=range]{width:100%;accent-color:#378ADD;cursor:pointer}
+  .calc-out{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+  .calc-card{background:var(--mist);border:1px solid var(--line);border-radius:14px;padding:20px 18px;text-align:center}
+  .calc-card .n{font-family:'Sora';font-weight:800;font-size:clamp(1.5rem,3.4vw,2.1rem);color:#378ADD;letter-spacing:-.02em}
+  .calc-card .l{font-size:.85rem;color:var(--slate-soft);margin-top:6px}
+  .calc-note{font-size:.8rem;color:var(--slate-soft);margin-top:18px;text-align:center}
+  .calc-cta{text-align:center;margin-top:18px}
+  .btn-navy{background:#1E3A5F;color:#fff;box-shadow:0 12px 28px -14px rgba(30,58,95,.6)}
+  @media(hover:hover){.btn-navy:hover{transform:translateY(-2px);box-shadow:0 16px 32px -14px rgba(30,58,95,.65)}}
+  .btn-navy:active{transform:translateY(0) scale(.98)}
+  @media(max-width:760px){.calc-controls{grid-template-columns:1fr}.calc-out{grid-template-columns:1fr}.calc{padding:26px 20px}}
+  /* SECTION SCROLL-REVEAL (12px variant; booking section excluded) */
+  .reveal-sec{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease}
+  .reveal-sec.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal-sec{opacity:1;transform:none;transition:none}}
+  /* STICKY BOOK PILL */
+  .book-pill{position:fixed;right:22px;bottom:22px;z-index:60;background:#1E3A5F;color:#fff;font-family:'Sora';font-weight:600;font-size:.9rem;padding:12px 22px;border-radius:999px;box-shadow:0 14px 34px -14px rgba(11,31,51,.55);opacity:0;transform:translateY(14px);pointer-events:none;transition:opacity .3s ease,transform .3s ease}
+  .book-pill.on{opacity:1;transform:none;pointer-events:auto}
+  @media(hover:hover){.book-pill:hover{background:#16324F}}
 </style>
 </head>
 <body>
@@ -278,6 +338,7 @@
       <a href="#roi">Impact</a>
       <a href="#services">Services</a>
       <a href="#process">How I work</a>
+      <a href="#about">About</a>
       <a href="#clients">Clients</a>
       <a href="#book" class="btn btn-primary">Book a call</a>
     </nav>
@@ -290,9 +351,14 @@
     <div>
       <span class="eyebrow">Contact Center &amp; Salesforce Transformation</span>
       <h1>Contact Center, AI &amp;<br>Salesforce, <span class="accent">made simple.</span></h1>
-      <p class="lead">Transformation and ROI don't have to be hard. We bring the strategy and the hands-on technical delivery to take customer service from on-premise pain to cloud and AI that pays back across service, sales, and the whole enterprise.</p>
+      <p class="lead">Transformation and ROI don't have to be hard. I bring the strategy and the hands-on technical delivery to take customer service from on-premise pain to cloud and AI that pays back across service, sales, and the whole enterprise.</p>
       <div class="hero-cta">
         <a href="#book" class="btn btn-primary">Book a 30 min discovery call</a>
+      </div>
+      <!-- LIVE AI DEFLECTION DEMO -->
+      <div class="ai-demo" aria-label="Example of an AI agent resolving a customer request on its own">
+        <div class="ai-demo-head"><span class="dot"></span>Live AI agent — demo</div>
+        <div class="ai-demo-body" id="aiDemoBody"></div>
       </div>
     </div>
     <div class="portrait-frame">
@@ -308,8 +374,9 @@
 <section class="roi-hero" id="roi">
   <div class="wrap">
     <h2 class="reveal">From overwhelmed agents to AI-empowered service.</h2>
-    <p class="sub reveal d1">AI assists your reps in real time and deflects routine interactions on its own, 24/7, grounded in your enterprise data with security and compliance built in. Customers get faster answers across every channel, and agents stop drowning. That's the contact center transformation we deliver with Salesforce Service Cloud, Voice, and Agentforce AI.</p>
+    <p class="sub reveal d1">AI assists your reps in real time and deflects routine interactions on its own, 24/7, grounded in your enterprise data with security and compliance built in. Customers get faster answers across every channel, and agents stop drowning. That's the contact center transformation I deliver with Salesforce Service Cloud, Voice, and Agentforce AI.</p>
 
+    <p class="stats-note reveal d1">Typical results across my programs</p>
     <div class="scene">
       <!-- BEFORE -->
       <div class="scene-card before reveal d1">
@@ -439,9 +506,9 @@
 <section id="services">
   <div class="wrap">
     <div class="sec-head wide reveal">
-      <span class="eyebrow">What we offer</span>
-      <h2 class="big-title">What services we offer</h2>
-      <p>Engage us for the strategy, the build, or the whole journey. However far you need to go, we meet you there.</p>
+      <span class="eyebrow">What I offer</span>
+      <h2 class="big-title">What I offer</h2>
+      <p>Engage me for the strategy, the build, or the whole journey. However far you need to go, I meet you there.</p>
     </div>
     <div class="engage">
       <div class="eng-card reveal d1">
@@ -464,7 +531,7 @@
 </section>
 
 <!-- MONEY STAT -->
-<section class="money">
+<section class="money reveal-sec">
   <div class="money-inner">
     <div class="wrap" style="display:flex;align-items:center;gap:36px;flex-wrap:wrap;justify-content:center;text-align:left;padding-left:28px;padding-right:28px;">
       <div class="money-figure">
@@ -473,18 +540,18 @@
           <circle cx="24" cy="24" r="16" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="2 3" opacity=".6"/>
           <text x="24" y="33" fill="#fff" font-family="Sora,sans-serif" font-size="26" font-weight="800" text-anchor="middle">$</text>
         </svg>
-        <div class="money-big">$30M+</div>
+        <div class="money-big" id="statMoney">$30M+</div>
       </div>
       <div class="money-copy">
         <h3>in service transformations architected &amp; delivered</h3>
-        <p>Across 30+ enterprise CX programs, from pre-sales and solution architecture through live, measurable delivery.</p>
+        <p>Across <span id="statPrograms">30+</span> enterprise CX programs, from pre-sales and solution architecture through live, measurable delivery.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- INDUSTRY VERTICAL FLIP -->
-<div class="industries">
+<div class="industries reveal-sec">
   <div class="wrap">
     <div class="ind-flip">
       <span class="ind-lead">Delivered across</span>
@@ -493,8 +560,8 @@
   </div>
 </div>
 
-<div class="logos">
-  <div class="wrap"><p class="cap">Platforms we architect &amp; implement, hands-on</p></div>
+<div class="logos reveal-sec">
+  <div class="wrap"><p class="cap">Platforms I architect &amp; implement, hands-on</p></div>
   <div class="marquee"><div class="marquee-track" id="track"></div></div>
 </div>
 
@@ -503,17 +570,17 @@
     <div class="dual-inner reveal">
       <div class="dual-side">
         <div class="k">The strategy</div>
-        <h3>We speak the boardroom</h3>
+        <h3>I speak the boardroom</h3>
         <p>Discovery, business cases, and a transformation roadmap aligned to real KPIs. The consulting that wins executive buy-in.</p>
       </div>
       <div class="dual-plus">+</div>
       <div class="dual-side">
         <div class="k">The technical delivery</div>
-        <h3>And we build the solution</h3>
-        <p>Hands-on Salesforce, Agentforce, and CCaaS delivery. We direct developers or get into the build ourselves, shipping working software on best practices.</p>
+        <h3>And I build the solution</h3>
+        <p>Hands-on Salesforce, Agentforce, and CCaaS delivery. I direct developers or get into the build myself, shipping working software on best practices.</p>
       </div>
     </div>
-    <div class="dual-foot">Most consultants do one. <span>We deliver both: Contact Center and Salesforce, strategy through working solution.</span></div>
+    <div class="dual-foot">Most consultants do one. <span>I deliver both: Contact Center and Salesforce, strategy through working solution.</span></div>
   </div>
 </section>
 
@@ -553,11 +620,29 @@
   </div>
 </section>
 
+<!-- ABOUT SEAN -->
+<section id="about" class="tint">
+  <div class="wrap about-wrap reveal-sec">
+    <div class="about-photo-col">
+      <img id="aboutPhoto" class="about-photo" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Sean Shvarzman" loading="lazy">
+    </div>
+    <div class="about-copy">
+      <span class="eyebrow">Who you're working with</span>
+      <h2>I started answering the phones. Now I redesign how they're answered.</h2>
+      <p>I began my career as a call center agent, taught myself the systems behind the queue, and became a Senior Principal leading contact center transformations for billion-dollar brands. I've sat in the agent's seat, the architect's seat, and the boardroom. And I'm the generation your customers belong to — I know how they expect to self-serve, because I am that customer.</p>
+      <blockquote class="testimonial">
+        <p>[Client quote goes here]</p>
+        <cite>[Role, Company]</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
 <section id="clients">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Trusted by</span>
-      <h2>Enterprises we've helped transform.</h2>
+      <h2>Enterprises I've helped transform.</h2>
     </div>
     <div class="roster reveal d1">
       <div class="client">Mom's Meals</div>
@@ -570,6 +655,38 @@
       <div class="client">UCSF</div>
       <div class="client">Patagonia</div>
       <div class="client">Texas Oncology</div>
+    </div>
+  </div>
+</section>
+
+<!-- ROI CALCULATOR -->
+<section id="roi-calc">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Quick estimate</span>
+      <h2>What could AI deflection recover for you?</h2>
+    </div>
+    <div class="calc reveal d1">
+      <div class="calc-controls">
+        <div class="calc-field">
+          <label for="calcAgents">Agents <b id="calcAgentsVal">40</b></label>
+          <input type="range" id="calcAgents" min="5" max="200" step="1" value="40">
+        </div>
+        <div class="calc-field">
+          <label for="calcCalls">Calls per month <b id="calcCallsVal">20,000</b></label>
+          <input type="range" id="calcCalls" min="1000" max="100000" step="500" value="20000">
+        </div>
+        <div class="calc-field">
+          <label for="calcAht">Avg handle time (min) <b id="calcAhtVal">8</b></label>
+          <input type="range" id="calcAht" min="3" max="15" step="1" value="8">
+        </div>
+      </div>
+      <div class="calc-out">
+        <div class="calc-card"><div class="n" id="calcHours">800</div><div class="l">Agent hours freed per month</div></div>
+        <div class="calc-card"><div class="n" id="calcDollars">$336,000</div><div class="l">Estimated annual cost recovered</div></div>
+      </div>
+      <p class="calc-note">Assumes ~30% deflection of routine contacts. The real target is one of the first KPIs we define together.</p>
+      <div class="calc-cta"><a href="#book" class="btn btn-navy">Let's define your real numbers →</a></div>
     </div>
   </div>
 </section>
@@ -587,6 +704,8 @@
          style="min-width:320px;height:720px;margin-top:26px;"></div>
   </div>
 </section>
+
+<a href="#book" class="book-pill" id="bookPill">Book a call</a>
 
 <footer>
   <div class="wrap foot">
@@ -704,7 +823,7 @@
 
   // SCROLL REVEAL — fade/slide each .reveal into view once
   (function(){
-    const els = document.querySelectorAll('.reveal');
+    const els = document.querySelectorAll('.reveal, .reveal-sec');
     if(!els.length) return;
     if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
       els.forEach(el=>el.classList.add('in')); return;
@@ -715,6 +834,119 @@
       });
     }, {threshold:.15, rootMargin:'0px 0px -8% 0px'});
     els.forEach(el=>ro.observe(el));
+  })();
+
+  // ABOUT PHOTO — reuse the hero headshot without duplicating the base64 payload
+  (function(){
+    const heroImg = document.querySelector('.portrait img');
+    const aboutImg = document.getElementById('aboutPhoto');
+    if(heroImg && aboutImg) aboutImg.src = heroImg.src;
+  })();
+
+  // LIVE AI DEFLECTION DEMO — looping chat animation (static render if reduced motion)
+  (function(){
+    const body = document.getElementById('aiDemoBody');
+    if(!body) return;
+    const steps = [
+      {who:'cust', text:'Hi, I need to change my delivery address'},
+      {who:'bot',  text:"Happy to help! I found your order #4821. What's the new address?"},
+      {who:'cust', text:'450 Ocean Dr, Miami FL'},
+      {who:'bot',  text:'Done — updated and confirmed by email.'}
+    ];
+    const chipText = '✓ Resolved by AI · no agent needed · 41 sec';
+    const el = (cls, html) => { const d = document.createElement('div'); d.className = cls; d.innerHTML = html; return d; };
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      steps.forEach(s=>{ const m = el('ai-msg '+s.who+' show', s.text); m.style.transition='none'; body.appendChild(m); });
+      const c = el('ai-chip show', chipText); c.style.transition='none'; body.appendChild(c);
+      return;
+    }
+    const timers = [];
+    function at(t, fn){ timers.push(setTimeout(fn, t)); }
+    function play(){
+      timers.length = 0;
+      body.innerHTML = '';
+      let t = 600;
+      steps.forEach(s=>{
+        if(s.who === 'bot'){
+          t += 200;
+          const tp = el('ai-typing','<i></i><i></i><i></i>');
+          at(t, ()=>{ body.appendChild(tp); requestAnimationFrame(()=>tp.classList.add('show')); });
+          t += 900;
+          at(t, ()=>{ tp.remove(); const m = el('ai-msg bot', s.text); body.appendChild(m); requestAnimationFrame(()=>m.classList.add('show')); });
+        } else {
+          const m = el('ai-msg cust', s.text);
+          at(t, ()=>{ body.appendChild(m); requestAnimationFrame(()=>m.classList.add('show')); });
+        }
+        t += 1000;
+      });
+      t += 200;
+      at(t, ()=>{ const c = el('ai-chip', chipText); body.appendChild(c); requestAnimationFrame(()=>c.classList.add('show')); });
+      t += 3200;
+      at(t, play);
+    }
+    play();
+  })();
+
+  // ROI CALCULATOR — live math
+  (function(){
+    const ag = document.getElementById('calcAgents'),
+          calls = document.getElementById('calcCalls'),
+          aht = document.getElementById('calcAht');
+    if(!calls) return;
+    const $ = id => document.getElementById(id);
+    const fmt = n => n.toLocaleString('en-US');
+    function upd(){
+      $('calcAgentsVal').textContent = fmt(+ag.value);
+      $('calcCallsVal').textContent = fmt(+calls.value);
+      $('calcAhtVal').textContent = fmt(+aht.value);
+      const hours = Math.round(calls.value * 0.30 * aht.value / 60);
+      const dollars = Math.round(hours * 35 * 12 / 1000) * 1000;
+      $('calcHours').textContent = fmt(hours);
+      $('calcDollars').textContent = '$' + fmt(dollars);
+    }
+    [ag, calls, aht].forEach(s => s.addEventListener('input', upd));
+    upd();
+  })();
+
+  // COUNT-UP on the $30M+ / 30+ stats — runs once, on scroll into view
+  (function(){
+    const money = document.getElementById('statMoney'),
+          prog = document.getElementById('statPrograms');
+    if(!money || !prog) return;
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return; // keep static final text
+    function animate(elm, target, render){
+      const t0 = performance.now(), dur = 1400;
+      (function tick(now){
+        const p = Math.min(((now||performance.now()) - t0) / dur, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        elm.textContent = render(Math.round(target * eased));
+        if(p < 1) requestAnimationFrame(tick);
+      })(t0);
+    }
+    let fired = false;
+    const io = new IntersectionObserver(es=>{
+      es.forEach(e=>{
+        if(e.isIntersecting && !fired){
+          fired = true;
+          animate(money, 30, v => '$' + v + 'M+');
+          animate(prog, 30, v => v + '+');
+          io.disconnect();
+        }
+      });
+    }, {threshold:.4});
+    io.observe(money);
+  })();
+
+  // STICKY BOOK PILL — shows past the hero, hides while the booking section is in view
+  (function(){
+    const pill = document.getElementById('bookPill'),
+          hero = document.querySelector('.hero'),
+          book = document.getElementById('book');
+    if(!pill || !hero || !book) return;
+    let pastHero = false, bookVisible = false;
+    const sync = () => pill.classList.toggle('on', pastHero && !bookVisible);
+    new IntersectionObserver(es=>{ es.forEach(e=>{ pastHero = !e.isIntersecting; sync(); }); }, {threshold:0}).observe(hero);
+    new IntersectionObserver(es=>{ es.forEach(e=>{ bookVisible = e.isIntersecting; sync(); }); }, {threshold:.05}).observe(book);
   })();
 </script>
 <!-- Calendly embed script -->
