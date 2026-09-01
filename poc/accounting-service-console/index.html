@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Service Console for Accounting — 4 SLDS Mockups</title>
+<style>
+  :root{
+    --brand:#0176d3; --brand-dark:#014486; --brand-light:#e8f1fb;
+    --bg:#f3f3f3; --card:#fff; --border:#e5e5e5; --border-strong:#c9c9c9;
+    --text:#181818; --muted:#5c5c5c; --faint:#747474;
+    --success:#2e844a; --warning:#dd7a01; --error:#ba0517; --info:#0176d3;
+    --contact:#7f8de1; --case:#f2806f; --knowledge:#ec7e5f; --queue:#1b96ff; --einstein:#5867e8;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:#dcdcdc;font-family:"Salesforce Sans",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);font-size:13px;line-height:1.4}
+  a{color:var(--brand);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  .intro{max-width:1280px;margin:32px auto 8px;padding:0 4px}
+  .intro h1{font-size:20px;font-weight:600;margin:0 0 4px}
+  .intro p{margin:0;color:#3d3d3d}
+  .screen-label{max-width:1280px;margin:40px auto 10px;padding:0 4px;font-size:14px;font-weight:600;color:#2b2b2b}
+  .screen-label span{font-weight:400;color:#5c5c5c;margin-left:8px}
+
+  .frame{width:1280px;height:760px;margin:0 auto;background:var(--bg);border:1px solid #b5b5b5;border-radius:6px;overflow:hidden;position:relative;display:flex;flex-direction:column;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+
+  /* Global header */
+  .gh{height:50px;background:#fff;border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 16px;gap:12px}
+  .gh .logo{height:30px;display:flex;align-items:center}
+  .gh .logo img{height:30px;width:auto;display:block}
+  .gh .search{flex:0 0 480px;margin:0 auto 0 190px;height:32px;border:1px solid var(--border-strong);border-radius:16px;display:flex;align-items:center;padding:0 12px;color:var(--faint);gap:8px}
+  .gh .ask{height:30px;border:1px solid var(--border-strong);border-radius:15px;padding:0 12px;display:flex;align-items:center;gap:6px;color:var(--text)}
+  .gh .icons{display:flex;gap:18px;margin-left:auto;align-items:center}
+  .gh .icons i{width:18px;height:18px;border:1.5px solid #5c5c5c;border-radius:4px;display:block}
+  .gh .icons .bell{position:relative}
+  .gh .icons .bell b{position:absolute;top:-8px;right:-9px;background:var(--error);color:#fff;font-size:9px;border-radius:8px;padding:0 4px;font-weight:600}
+  .gh .avatar{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,#8e6a48,#c39a6f)}
+
+  /* App bar */
+  .ab{height:40px;background:#fff;border-bottom:1px solid var(--border);display:flex;align-items:center;padding-left:12px}
+  .ab .grid{width:16px;height:16px;display:grid;grid-template-columns:repeat(3,4px);gap:2px;margin-right:12px}
+  .ab .grid i{width:4px;height:4px;background:#5c5c5c;border-radius:1px}
+  .ab .app{font-size:17px;font-weight:400;margin-right:20px;white-space:nowrap}
+  .ab .wtab{height:40px;display:flex;align-items:center;padding:0 14px;border-right:1px solid var(--border);gap:8px;color:var(--text);white-space:nowrap;position:relative}
+  .ab .wtab.active{border-bottom:3px solid var(--brand);color:var(--brand)}
+  .ab .wtab .oi{width:16px;height:16px;border-radius:3px}
+  .ab .wtab .x{color:var(--faint);margin-left:6px}
+  .ab .wtab .caret{color:var(--faint);font-size:10px}
+
+  /* Body */
+  .body{flex:1;display:flex;min-height:0}
+  .rail{width:44px;background:#fff;border-right:1px solid var(--border);display:flex;flex-direction:column;align-items:center;padding-top:12px;gap:18px}
+  .rail i{width:18px;height:18px;border:1.5px solid #5c5c5c;border-radius:4px;display:block}
+  .rail i.on{background:var(--brand);border-color:var(--brand)}
+  .rail i.dot{border-radius:50%}
+  .work{flex:1;padding:12px;display:grid;gap:12px;min-height:0;overflow:hidden}
+  .util{height:26px;background:#fff;border-top:1px solid var(--border);display:flex;align-items:center;padding:0 12px;gap:22px;font-size:12px;color:var(--text)}
+  .util .tri{color:var(--faint)}
+
+  .card{background:var(--card);border:1px solid var(--border);border-radius:4px;overflow:hidden}
+  .card-h{padding:10px 14px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border)}
+  .card-h h3{margin:0;font-size:15px;font-weight:600}
+  .card-b{padding:12px 14px}
+  .oi{width:32px;height:32px;border-radius:4px;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:14px;flex:0 0 auto}
+  .oi.sm{width:20px;height:20px;font-size:10px;border-radius:3px}
+  .oi.contact{background:var(--contact)}.oi.case{background:var(--case)}.oi.knowledge{background:var(--knowledge)}.oi.queue{background:var(--queue)}.oi.einstein{background:var(--einstein)}.oi.doc{background:#3ba755}
+
+  .field{margin-bottom:12px}
+  .field .lb{font-size:12px;color:var(--faint);margin-bottom:2px}
+  .field .vl{font-size:13px;color:var(--text);display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);padding-bottom:4px}
+  .field .vl .pen{color:var(--faint);font-size:11px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+
+  .btn{height:32px;border:1px solid var(--border-strong);background:#fff;border-radius:4px;padding:0 14px;font-size:13px;color:var(--brand);display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+  .btn.brand{background:var(--brand);border-color:var(--brand);color:#fff}
+  .btn.icon{padding:0 8px;color:var(--faint)}
+  .btn-group{display:inline-flex}
+  .btn-group .btn{border-radius:0}
+  .btn-group .btn:first-child{border-radius:4px 0 0 4px}
+  .btn-group .btn:last-child{border-radius:0 4px 4px 0}
+  .btn-group .btn + .btn{margin-left:-1px}
+
+  .tabs{display:flex;border-bottom:1px solid var(--border);padding:0 6px}
+  .tab{padding:10px 14px;color:var(--text);position:relative;font-size:13px}
+  .tab.active{color:var(--brand);font-weight:600}
+  .tab.active:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--brand)}
+
+  .badge{display:inline-block;padding:2px 10px;border-radius:12px;font-size:11px;font-weight:600;white-space:nowrap}
+  .b-pending{background:#fef2e0;color:#a0530a}
+  .b-filed{background:#e0f2e6;color:#1f6b3c}
+  .b-review{background:#e8f1fb;color:#0b5cab}
+  .b-new{background:#eef0f4;color:#3d3d3d}
+  .b-urgent{background:#fdecec;color:#8a0f1a}
+
+  .banner{background:var(--brand-light);border:1px solid #b3d4f4;border-radius:4px;padding:10px 12px;color:#032d60}
+  .brain{width:24px;height:24px;border-radius:50%;background:var(--einstein);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:700}
+
+  table{width:100%;border-collapse:collapse}
+  th{font-size:12px;color:var(--muted);text-align:left;font-weight:600;padding:8px 12px;border-bottom:1px solid var(--border);background:#fafafa;white-space:nowrap}
+  td{padding:9px 12px;border-bottom:1px solid var(--border);vertical-align:middle;white-space:nowrap}
+  tr.selected td{background:#e8f1fb}
+  .chk{width:14px;height:14px;border:1px solid var(--border-strong);border-radius:3px;display:inline-block;vertical-align:middle;background:#fff}
+  .chk.on{background:var(--brand);border-color:var(--brand);position:relative}
+  .chk.on:after{content:"";position:absolute;left:4px;top:1px;width:4px;height:8px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+
+  .kba{padding:10px 0;border-bottom:1px solid var(--border)}
+  .kba a{font-weight:600;font-size:13px}
+  .kba p{margin:3px 0 4px;color:var(--muted);font-size:12px}
+  .kba small{color:var(--faint);font-size:11px}
+  .search-in{height:30px;border:1px solid var(--border-strong);border-radius:15px;display:flex;align-items:center;padding:0 10px;color:var(--faint);gap:6px;font-size:12px;flex:1}
+  .chip{display:inline-block;border:1px solid var(--border-strong);border-radius:12px;padding:2px 8px;font-size:11px;margin-right:6px;background:#fff}
+
+  .path{display:flex;gap:2px;flex:1}
+  .path div{flex:1;height:28px;background:#eef0f4;color:#444;display:flex;align-items:center;justify-content:center;font-size:12px;position:relative;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 50%,calc(100% - 10px) 100%,0 100%,10px 50%)}
+  .path div.done{background:var(--success);color:#fff}
+  .path div.cur{background:var(--brand-dark);color:#fff;font-weight:600}
+
+  .email{border-top:1px solid var(--border);padding:10px 0}
+  .email .from{font-size:12px;color:var(--text);margin:2px 0}
+  .email .ts{color:var(--brand);font-size:12px;font-weight:600}
+  .email p{margin:6px 0 0;color:#333;font-size:12.5px}
+
+  .subtabs{display:flex;gap:4px;background:#fff;border:1px solid var(--border);border-radius:4px 4px 0 0;padding:0 8px}
+  .subtabs .tab{padding:12px 16px}
+
+  .omni{position:absolute;right:22px;bottom:34px;width:330px;background:#fff;border:1px solid var(--border-strong);border-radius:6px 6px 0 0;box-shadow:0 -4px 16px rgba(0,0,0,.15);overflow:hidden}
+  .omni .oh{background:#032d60;color:#fff;padding:10px 12px;font-weight:600;display:flex;align-items:center;gap:8px}
+  .omni .status{padding:10px 12px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
+  .omni .status .dot{width:10px;height:10px;border-radius:50%;background:var(--success)}
+  .omni .item{padding:10px 12px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+  .omni .item .t{font-weight:600;font-size:12.5px}
+  .omni .item .s{color:var(--faint);font-size:11px}
+  .omni .item .acc{display:flex;gap:6px}
+  .omni .item .acc b{width:26px;height:26px;border-radius:50%;border:1px solid var(--border-strong);display:inline-flex;align-items:center;justify-content:center;font-size:12px;color:var(--success)}
+  .omni .item .acc b.no{color:var(--error)}
+  .omni .item.new{background:#fff7e6}
+
+  .highlight{outline:3px solid var(--error);outline-offset:3px;border-radius:4px;position:relative}
+  .callout{position:absolute;top:-34px;left:50%;transform:translateX(-50%);background:var(--error);color:#fff;font-size:11px;font-weight:600;padding:4px 8px;border-radius:3px;white-space:nowrap}
+  .callout:after{content:"";position:absolute;bottom:-5px;left:50%;margin-left:-5px;border:5px solid transparent;border-top-color:var(--error);border-bottom:0}
+  .hero{height:70px;background:linear-gradient(90deg,#c9dcf2,#e9f2fb)}
+  .avatar-big{width:56px;height:56px;border-radius:50%;background:#fff;border:3px solid #fff;margin:-30px 0 0 14px;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--brand-dark);box-shadow:0 1px 3px rgba(0,0,0,.2)}
+</style>
+</head>
+<body>
+
+<div class="intro">
+  <h1>Service Console for an accounting firm</h1>
+  <p>Four high-fidelity screens following Salesforce Lightning Design System patterns. Client: Roi &amp; Sean Enterprises LLC. Built for discovery demos and the first-call deck.</p>
+</div>
+
+<!-- ===================== SCREEN 1 ===================== -->
+<div class="screen-label">Screen 1 <span>Customer 360 contact view: Roi &amp; Sean</span></div>
+<div class="frame">
+  <div class="gh">
+    <div class="logo"><img src="data:image/png;base64,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" alt="Logo"></div>
+    <div class="search">&#9906;&nbsp; Search...</div>
+    <div class="ask">&#10022; Ask</div>
+    <div class="icons"><i></i><i></i><i></i><i></i><span class="bell"><i></i><b>18</b></span><div class="avatar"></div></div>
+  </div>
+  <div class="ab">
+    <div class="grid"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="app">Service Console</div>
+    <div class="wtab">Contacts <span class="caret">&#9660;</span></div>
+    <div class="wtab active"><span class="oi contact sm"></span> Roi &amp; Sean | Co... <span class="caret">&#9660;</span><span class="x">&#10005;</span></div>
+  </div>
+  <div class="body">
+    <div class="rail"><i class="on"></i><i class="dot"></i><i></i><i></i><i></i><i></i></div>
+    <div class="work" style="grid-template-columns:300px 1fr 330px;grid-template-rows:auto 1fr">
+      <!-- header spanning -->
+      <div class="card" style="grid-column:1/3;display:flex;align-items:center;padding:12px 14px;gap:12px">
+        <span class="oi contact">&#9787;</span>
+        <div><div style="font-size:12px;color:var(--faint)">Contact</div><div style="font-size:20px;font-weight:600">Roi &amp; Sean</div></div>
+        <div style="margin-left:auto" class="btn-group"><span class="btn icon">&#8985;</span><span class="btn">+ Follow</span><span class="btn">Edit</span><span class="btn">Log in as</span><span class="btn icon">&#9660;</span></div>
+      </div>
+      <div class="card" style="grid-column:3;display:flex;align-items:center;padding:10px 14px;gap:10px;background:var(--brand-light);border-color:#b3d4f4">
+        <span class="badge" style="background:#fff;color:#032d60">Account SLA: Gold</span>
+        <span style="font-size:12px;color:#032d60">Renewal Mar 2027</span>
+      </div>
+
+      <!-- Left: contact details -->
+      <div class="card" style="overflow:auto">
+        <div class="card-h"><span class="oi contact sm"></span><h3>Contact Details</h3><span style="margin-left:auto;color:var(--faint)">&#9660;</span></div>
+        <div class="card-b">
+          <div class="field"><div class="lb">Name</div><div class="vl">Roi &amp; Sean <span class="pen">&#9998;</span></div></div>
+          <div class="field"><div class="lb">Account Name</div><div class="vl"><a href="#">Roi &amp; Sean Enterprises LLC</a> <span class="pen">&#9998;</span></div></div>
+          <div class="field"><div class="lb">Email</div><div class="vl"><a href="#">sean@taxpros.com</a> <span class="pen">&#9998;</span></div></div>
+          <div class="field"><div class="lb">Phone</div><div class="vl">(305) 746-8405 <span class="pen">&#9998;</span></div></div>
+          <div class="field"><div class="lb">Title</div><div class="vl">Managing Partner <span class="pen">&#9998;</span></div></div>
+          <div class="field"><div class="lb">Assigned CPA</div><div class="vl"><a href="#">Sarah Miller</a> <span class="pen">&#9998;</span></div></div>
+          <div class="field"><div class="lb">Entity Type</div><div class="vl">S Corporation <span class="pen">&#9998;</span></div></div>
+          <div class="field"><div class="lb">Fiscal Year End</div><div class="vl">December 31 <span class="pen">&#9998;</span></div></div>
+          <div class="field"><div class="lb">Client Since</div><div class="vl">2019 <span class="pen">&#9998;</span></div></div>
+        </div>
+      </div>
+
+      <!-- Center -->
+      <div style="display:flex;flex-direction:column;gap:12px;min-height:0">
+        <div class="card">
+          <div class="card-h"><span class="brain">E</span><h3>Einstein AI Account Summary</h3><span style="margin-left:auto;color:var(--faint);font-size:12px">Updated 2 min ago</span></div>
+          <div class="card-b" style="font-size:13px;color:#333">
+            Active client relationship with Roi &amp; Sean Enterprises LLC. Missing corporate entity K-1 is causing a filing delay for personal returns. CPA Sarah Miller coordinating with external firm. Account SLA: Gold.
+            <div style="margin-top:8px;display:flex;gap:6px"><span class="chip">1 open case</span><span class="chip">Extension filed</span><span class="chip">Next action: obtain K-1</span></div>
+          </div>
+        </div>
+        <div class="card" style="flex:1;overflow:auto">
+          <div class="card-h"><span class="oi doc sm"></span><h3>Tax Submissions &amp; Documents</h3><span style="margin-left:auto;color:var(--faint);font-size:12px">Tax year 2025</span></div>
+          <table>
+            <thead><tr><th>Submission</th><th>Type</th><th>Status</th><th style="text-align:right">Amount</th><th>Due</th></tr></thead>
+            <tbody>
+              <tr><td><a href="#">Form 1040</a><div style="font-size:11px;color:var(--faint)">Individual income tax return</div></td><td>Personal</td><td><span class="badge b-pending">Pending Client Signature</span></td><td style="text-align:right">$18,400</td><td>Oct 15, 2026</td></tr>
+              <tr><td><a href="#">Form 1120S</a><div style="font-size:11px;color:var(--faint)">S corporation return</div></td><td>Corporate</td><td><span class="badge b-filed">Filed</span></td><td style="text-align:right">—</td><td>Sep 15, 2026</td></tr>
+              <tr><td><a href="#">W-2 &amp; 1099 Intake</a><div style="font-size:11px;color:var(--faint)">Income documents</div></td><td>Personal</td><td><span class="badge b-review">Under Review</span></td><td style="text-align:right">—</td><td>—</td></tr>
+              <tr><td><a href="#">Audit Notice</a><div style="font-size:11px;color:var(--faint)">IRS correspondence CP2000</div></td><td>Corporate</td><td><span class="badge b-review">Under Review</span></td><td style="text-align:right">—</td><td>Nov 3, 2026</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Right: knowledge -->
+      <div class="card" style="overflow:auto">
+        <div class="card-h"><span class="oi knowledge sm"></span><h3>Knowledge</h3><span class="btn" style="margin-left:auto;height:26px;font-size:12px">New Article &#9660;</span></div>
+        <div class="card-b">
+          <div style="display:flex;gap:8px;margin-bottom:10px"><span class="btn brand" style="height:28px;font-size:12px">Filters</span><div class="search-in">&#9906; Search Knowledge...</div></div>
+          <div style="font-size:12px;color:var(--faint);margin-bottom:4px"><span class="brain" style="width:16px;height:16px;font-size:9px">E</span> Recommendations</div>
+          <div class="kba"><a href="#">KBA-120: Handling Missing W-2s / K-1s</a><p>Steps to request replacement forms, file with Form 4852, and document the delay for extension support.</p><small>94% relevant</small></div>
+          <div class="kba"><a href="#">KBA-044: Guide to IRS Audit Procedures</a><p>Responding to CP2000 and correspondence audits: timelines, required records, and client communication.</p><small>88% relevant</small></div>
+          <div class="kba"><a href="#">KBA-201: S Corp Shareholder Basis Worksheet</a><p>Calculating basis for Form 7203 when distributions exceed reported income.</p><small>76% relevant</small></div>
+          <div class="kba" style="border:0"><a href="#">KBA-017: Extension Filing Checklist (Form 4868)</a><p>Client-facing checklist and payment estimate guidance for personal extensions.</p><small>71% relevant</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="util"><span class="tri">&#8250;&#8250;</span> Macros <span>&#9889; Recent Items</span><span>&#9889; Rewind</span><span>&#9889; Tool - Q Demo Tracker</span></div>
+</div>
+
+<!-- ===================== SCREEN 2 ===================== -->
+<div class="screen-label">Screen 2 <span>Case record with Einstein email summary and email feed</span></div>
+<div class="frame">
+  <div class="gh">
+    <div class="logo"><img src="data:image/png;base64,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" alt="Logo"></div>
+    <div class="search">&#9906;&nbsp; Search...</div>
+    <div class="ask">&#10022; Ask</div>
+    <div class="icons"><i></i><i></i><i></i><i></i><span class="bell"><i></i><b>18</b></span><div class="avatar"></div></div>
+  </div>
+  <div class="ab">
+    <div class="grid"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="app">Service Console</div>
+    <div class="wtab">Cases <span class="caret">&#9660;</span></div>
+    <div class="wtab"><span class="oi contact sm"></span> Roi &amp; Sean <span class="caret">&#9660;</span><span class="x">&#10005;</span></div>
+    <div class="wtab active"><span class="oi case sm"></span> 00006792 <span class="caret">&#9660;</span><span class="x">&#10005;</span></div>
+  </div>
+  <div class="body">
+    <div class="rail"><i class="on"></i><i class="dot"></i><i></i><i></i><i></i><i></i></div>
+    <div class="work" style="grid-template-columns:270px 1fr 320px">
+      <!-- Left compact contact -->
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div class="card">
+          <div class="hero"></div>
+          <div class="avatar-big">RS</div>
+          <div style="padding:6px 14px 12px"><div style="font-weight:600;font-size:15px">Roi &amp; Sean</div><div style="font-size:12px;color:var(--faint)">Miami, Florida</div></div>
+        </div>
+        <div class="card">
+          <div class="card-h"><span class="oi contact sm"></span><h3>Contact Details</h3><span style="margin-left:auto;color:var(--faint)">&#9660;</span></div>
+          <div class="card-b">
+            <div class="field"><div class="lb">Phone</div><div class="vl">(305) 746-8405 <span class="pen">&#9998;</span></div></div>
+            <div class="field"><div class="lb">Email</div><div class="vl"><a href="#">sean@taxpros.com</a> <span class="pen">&#9998;</span></div></div>
+            <div class="field"><div class="lb">Account Name</div><div class="vl"><a href="#">Roi &amp; Sean Enterprises LLC</a> <span class="pen">&#9998;</span></div></div>
+            <div class="field"><div class="lb">Title</div><div class="vl">Managing Partner <span class="pen">&#9998;</span></div></div>
+            <div class="field" style="margin:0"><div class="lb">Assigned CPA</div><div class="vl" style="border:0"><a href="#">Sarah Miller</a></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Center case -->
+      <div class="card" style="display:flex;flex-direction:column;min-height:0">
+        <div style="padding:12px 14px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--border)">
+          <span class="oi case">&#9776;</span>
+          <div><div style="font-size:12px;color:var(--faint)">Case</div><div style="font-size:18px;font-weight:600">Missing K-1 Review for Roi &amp; Sean</div></div>
+          <div class="btn-group" style="margin-left:auto"><span class="btn">+ Follow</span><span class="btn">Escalate</span><span class="btn">Edit</span><span class="btn">Reassign</span><span class="btn icon">&#9660;</span></div>
+        </div>
+        <div style="padding:10px 14px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border)">
+          <span style="color:var(--faint)">&#9660;</span>
+          <div class="path"><div class="done">New</div><div class="cur">Working</div><div>Waiting on Client</div><div>Escalated</div><div>Closed</div></div>
+          <span class="btn" style="height:28px;font-size:12px;color:var(--text)">&#10003; Mark Status as Complete</span>
+        </div>
+        <div class="tabs"><div class="tab">Details</div><div class="tab active">Feed</div><div class="tab">Related</div><div class="tab">Agentforce Service Assistant</div><div class="tab">Slack</div></div>
+        <div style="padding:12px 14px;overflow:auto">
+          <div class="card" style="border-color:#c7cdf3;background:#f6f7fe">
+            <div class="card-h" style="border-bottom:0"><span class="brain">E</span><h3>Einstein Email Summaries</h3><span style="margin-left:auto;color:var(--brand)">&#9432;</span></div>
+            <div class="card-b" style="padding-top:0">
+              <div style="font-size:12px;color:var(--faint);margin-bottom:4px">Combined Summary <span style="color:var(--text)">from 4 emails</span></div>
+              <div style="font-size:13px">Client inquiring about delayed K-1 schedule. Personal documents submitted, awaiting corporate K-1 before filing Form 1040 extension.</div>
+              <div style="margin-top:10px;font-size:12px;color:var(--faint)">Participants</div>
+              <div style="margin:4px 0 8px"><span class="chip">Sarah Miller (CPA)</span><span class="chip">sean@taxpros.com</span></div>
+              <div style="font-size:12px;color:var(--faint)">Date range</div><div style="font-size:12px">Aug 27, 2026 – Sep 1, 2026</div>
+            </div>
+          </div>
+
+          <div style="margin:14px 0 4px;font-weight:600;font-size:13px">&#9660; Individual Email Summaries <span style="font-weight:400;color:var(--faint)">4 emails</span></div>
+
+          <div class="email"><div class="ts">&#9993; Tuesday, Sep 1, 09:12 AM EDT</div><div class="from"><b>From:</b> Sarah Miller, CPA &nbsp;&nbsp;<b>To:</b> sean@taxpros.com</div><div style="font-size:12px;color:var(--faint)">Subject: RE: K-1 status and 1040 extension</div><p>Confirmed the Form 4868 extension is filed. We will finalize your 1040 within 5 business days of receiving the corporate K-1 from the external firm.</p></div>
+          <div class="email"><div class="ts">&#9993; Monday, Aug 31, 04:40 PM EDT</div><div class="from"><b>From:</b> sean@taxpros.com &nbsp;&nbsp;<b>To:</b> Sarah Miller, CPA</div><div style="font-size:12px;color:var(--faint)">Subject: RE: K-1 status and 1040 extension</div><p>Thanks Sarah. The other firm says the K-1 is delayed until mid-September. Does this create any penalty exposure for us?</p></div>
+          <div class="email"><div class="ts">&#9993; Friday, Aug 28, 11:05 AM EDT</div><div class="from"><b>From:</b> Sarah Miller, CPA &nbsp;&nbsp;<b>To:</b> sean@taxpros.com</div><div style="font-size:12px;color:var(--faint)">Subject: RE: K-1 status and 1040 extension</div><p>Received all your personal documents. Your return is complete except for the Schedule K-1 from the corporate entity. Recommending an extension so we are not filing an estimate.</p></div>
+          <div class="email"><div class="ts">&#9993; Thursday, Aug 27, 08:31 AM EDT</div><div class="from"><b>From:</b> sean@taxpros.com &nbsp;&nbsp;<b>To:</b> support@cpafirm.com</div><div style="font-size:12px;color:var(--faint)">Subject: K-1 status and 1040 extension</div><p>Hi team, uploaded my W-2s and 1099s to the portal. Still waiting on the K-1 from the S corp. What is our plan for the 1040?</p></div>
+        </div>
+      </div>
+
+      <!-- Right -->
+      <div class="card" style="overflow:auto">
+        <div class="tabs"><div class="tab active">Case Tools</div><div class="tab">Case History</div><div class="tab">Insights</div></div>
+        <div class="card-b">
+          <div style="font-weight:600;margin-bottom:6px">Next Best Action</div>
+          <div class="banner" style="font-size:12px;margin-bottom:14px">Send the client a Form 4852 substitute worksheet and set a follow-up for Sep 15 when the K-1 is expected. <div style="margin-top:8px"><span class="btn brand" style="height:26px;font-size:12px">Accept</span> <span class="btn" style="height:26px;font-size:12px">Dismiss</span></div></div>
+          <div class="card-h" style="padding:8px 0;border-top:1px solid var(--border)"><span class="oi knowledge sm"></span><h3 style="font-size:14px">Knowledge</h3><span class="btn" style="margin-left:auto;height:26px;font-size:12px">New Article &#9660;</span></div>
+          <div style="display:flex;gap:8px;margin:8px 0 10px"><span class="btn brand" style="height:28px;font-size:12px">Filters</span><div class="search-in">&#9906; Search Knowledge...</div></div>
+          <div style="font-size:12px;color:var(--faint)"><span class="brain" style="width:16px;height:16px;font-size:9px">E</span> Einstein Recommendations</div>
+          <div class="kba"><a href="#">KBA-091: IRS Form 1040 Instructions</a><p>Line-by-line guidance, extension rules, and estimated payment safe harbors.</p><small>92% relevant · <a href="#">Mark as Not Helpful</a></small></div>
+          <div class="kba"><a href="#">KBA-120: K-1 Distribution Queries</a><p>Handling late or missing Schedule K-1s and client communication templates.</p><small>90% relevant · <a href="#">Mark as Not Helpful</a></small></div>
+          <div class="kba" style="border:0"><a href="#">KBA-017: Extension Filing Checklist (Form 4868)</a><p>Payment estimate and documentation requirements.</p><small>77% relevant · <a href="#">Mark as Not Helpful</a></small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="util"><span class="tri">&#8250;&#8250;</span> Macros <span>&#9889; Recent Items</span><span>&#9889; Rewind</span><span>&#9889; Tool - Q Demo Tracker</span></div>
+</div>
+
+<!-- ===================== SCREEN 3 ===================== -->
+<div class="screen-label">Screen 3 <span>Omni Supervisor and queue backlog</span></div>
+<div class="frame">
+  <div class="gh">
+    <div class="logo"><img src="data:image/png;base64,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" alt="Logo"></div>
+    <div class="search">&#9906;&nbsp; Search...</div>
+    <div class="ask">&#10022; Ask</div>
+    <div class="icons"><i></i><i></i><i></i><i></i><span class="bell"><i></i><b>18</b></span><div class="avatar"></div></div>
+  </div>
+  <div class="ab">
+    <div class="grid"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="app">Service Console</div>
+    <div class="wtab active">Command Center for Service <span class="caret">&#9660;</span></div>
+  </div>
+  <div class="body">
+    <div class="rail"><i class="on"></i><i class="dot"></i><i></i><i></i><i></i><i></i></div>
+    <div class="work" style="grid-template-rows:auto 1fr;gap:0">
+      <div class="subtabs"><div class="tab">*Wallboard</div><div class="tab">Service Reps</div><div class="tab">Agentforce</div><div class="tab active">Queues Backlog</div><div class="tab">In-Progress Work</div><div class="tab">Skills Backlog</div></div>
+      <div class="card" style="border-top:0;border-radius:0 0 4px 4px;overflow:auto">
+        <div style="padding:14px 16px;display:flex;align-items:center;gap:12px">
+          <span class="oi queue">&#8987;</span>
+          <h2 style="margin:0;font-size:17px;font-weight:600">Queues Backlog Summary</h2>
+          <div style="margin-left:auto;display:flex;gap:8px"><span class="btn">Reassign All Work</span><span class="btn">Create Demo Cases</span><span class="btn">&#10006; Clear Filters</span><span class="btn icon">&#9881; &#9660;</span></div>
+        </div>
+        <table>
+          <thead><tr><th style="width:36px"><span class="chk"></span></th><th>Queue &#8597;</th><th>Priority &#8597;</th><th>Work Size</th><th>Type &#9660;</th><th>Total Waiting &#8597;</th><th>Longest Wait Time &#8597;</th><th>Average Wait Time &#8597;</th><th>Health</th></tr></thead>
+          <tbody>
+            <tr><td><span class="chk"></span></td><td><a href="#">Tax Preparation Queue</a></td><td>1</td><td>22 units</td><td>&#9776; Case</td><td><b>8</b></td><td>24.6 min</td><td>10.4 min</td><td><span class="badge b-urgent">Above threshold</span></td></tr>
+            <tr><td><span class="chk"></span></td><td><a href="#">Document Request Queue</a></td><td>1</td><td>6 units</td><td>&#9776; Case</td><td><b>4</b></td><td>9.1 min</td><td>4.8 min</td><td><span class="badge b-pending">Watch</span></td></tr>
+            <tr><td><span class="chk"></span></td><td><a href="#">Audit Response Queue</a></td><td>1</td><td>2 units</td><td>&#9776; Case</td><td>0</td><td>—</td><td>—</td><td><span class="badge b-filed">Healthy</span></td></tr>
+            <tr><td><span class="chk"></span></td><td><a href="#">Payroll Services Queue</a></td><td>3</td><td>1 unit</td><td>&#9776; Case</td><td>0</td><td>—</td><td>—</td><td><span class="badge b-filed">Healthy</span></td></tr>
+            <tr><td><span class="chk"></span></td><td><a href="#">Client Portal Support</a></td><td>2</td><td>3 units</td><td>&#9993; Email</td><td>1</td><td>2.2 min</td><td>2.2 min</td><td><span class="badge b-filed">Healthy</span></td></tr>
+          </tbody>
+        </table>
+        <div style="padding:10px 16px;font-size:12px;color:var(--faint);display:flex;gap:14px;align-items:center;border-top:1px solid var(--border)">1 - 5 of 5 &nbsp; Display <span class="chip">10 &#9660;</span> records per page <span style="margin-left:auto">&#9664;&#9664; &#9664; Previous &nbsp; Next &#9654; &#9654;&#9654; &nbsp; Page 1</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="util"><span class="tri">&#8250;&#8250;</span> Macros <span>&#9889; Recent Items</span><span>&#9889; Rewind</span><span>&#9889; Tool - Q Demo Tracker</span></div>
+
+  <!-- Omni-Channel docked widget -->
+  <div class="omni">
+    <div class="oh"><span style="font-size:14px">&#9673;</span> Omni-Channel <span style="margin-left:auto;font-weight:400;opacity:.8">&#9660;</span></div>
+    <div class="status"><span class="dot"></span><div><div style="font-weight:600">Available - Tax Prep Queue</div><div style="font-size:11px;color:var(--faint)">Capacity 3 of 5 · 4 new work items</div></div><span style="margin-left:auto;color:var(--faint)">&#9660;</span></div>
+    <div class="item new"><div><div class="t">Tax-001121 · Form 1040 signature request</div><div class="s">Tax Preparation Queue · Priority 1 · just now</div></div><div class="acc"><b>&#10003;</b><b class="no">&#10005;</b></div></div>
+    <div class="item new"><div><div class="t">Tax-001122 · 1099 upload failed on portal</div><div class="s">Document Request Queue · Priority 1 · 12s ago</div></div><div class="acc"><b>&#10003;</b><b class="no">&#10005;</b></div></div>
+    <div class="item"><div><div class="t">Tax-001119 · Form 1040 Review</div><div class="s">Accepted · working 6 min</div></div><span class="badge b-review">Open</span></div>
+    <div class="item" style="border:0"><div><div class="t">Tax-001113 · Missing K-1 Request</div><div class="s">Accepted · waiting on client</div></div><span class="badge b-pending">Waiting</span></div>
+  </div>
+</div>
+
+<!-- ===================== SCREEN 4 ===================== -->
+<div class="screen-label">Screen 4 <span>Case list view with bulk owner reassignment</span></div>
+<div class="frame">
+  <div class="gh">
+    <div class="logo"><img src="data:image/png;base64,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" alt="Logo"></div>
+    <div class="search">&#9906;&nbsp; Search...</div>
+    <div class="ask">&#10022; Ask</div>
+    <div class="icons"><i></i><i></i><i></i><i></i><span class="bell"><i></i><b>18</b></span><div class="avatar"></div></div>
+  </div>
+  <div class="ab">
+    <div class="grid"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="app">Service Console</div>
+    <div class="wtab active">Cases <span class="caret">&#9660;</span></div>
+    <div class="wtab"><span class="oi contact sm"></span> Roi &amp; Sean | Co... <span class="caret">&#9660;</span><span class="x">&#10005;</span></div>
+  </div>
+  <div class="body">
+    <div class="rail"><i class="on"></i><i class="dot"></i><i></i><i></i><i></i><i></i></div>
+    <div class="work">
+      <div class="card" style="overflow:auto">
+        <div style="padding:12px 16px 4px;display:flex;align-items:flex-start;gap:12px">
+          <span class="oi case">&#9776;</span>
+          <div><div style="font-size:12px;color:var(--faint)">Cases</div><div style="font-size:20px;font-weight:600">Active Tax Cases <span style="font-size:13px;font-weight:400;color:var(--faint)">&#9660; &nbsp; &#8985;</span></div></div>
+          <div style="margin-left:auto;display:flex;gap:0;align-items:flex-start;padding-top:36px" class="btn-group">
+            <span class="btn">New</span>
+            <span class="btn highlight" style="color:var(--brand)"><span class="callout">Bulk reassign selected cases to a queue or new owner</span>Change Owner</span>
+            <span class="btn">Merge Cases</span><span class="btn">Add to an Actionable List</span><span class="btn">Assign Label</span><span class="btn icon">&#9660;</span>
+          </div>
+        </div>
+        <div style="padding:6px 16px 10px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--border)">
+          <span style="font-size:12px;color:var(--text);font-weight:600">4 items selected</span>
+          <div style="margin-left:auto;display:flex;gap:8px;align-items:center"><div class="search-in" style="width:220px;flex:0 0 auto">&#9906; Search this list...</div><span class="btn icon">&#9881; &#9660;</span><span class="btn icon">&#9638; &#9660;</span><span class="btn icon">&#8635;</span><span class="btn icon">&#9998;</span><span class="btn icon">&#9776;</span></div>
+        </div>
+        <table>
+          <thead><tr><th style="width:30px"></th><th style="width:30px"><span class="chk on"></span></th><th>Case Number &#9660;</th><th>Subject &#9660;</th><th>Case Owner &#9660;</th><th>Status &#9660;</th><th>Date/Time Opened &#9660;</th><th>Priority &#9660;</th><th style="width:30px"></th></tr></thead>
+          <tbody>
+            <tr class="selected"><td style="color:var(--faint)">1</td><td><span class="chk on"></span></td><td><a href="#">Tax-001119</a></td><td><a href="#">Form 1040 Review</a></td><td><a href="#">Daniel Ortiz</a> <span class="badge b-new" style="margin-left:6px">Departing</span></td><td>Working</td><td>9/1/2026, 8:14 AM</td><td>High</td><td style="color:var(--faint)">&#9660;</td></tr>
+            <tr class="selected"><td style="color:var(--faint)">2</td><td><span class="chk on"></span></td><td><a href="#">Tax-001120</a></td><td><a href="#">Form 1040 Review</a></td><td><a href="#">Daniel Ortiz</a> <span class="badge b-new" style="margin-left:6px">Departing</span></td><td>New</td><td>9/1/2026, 8:22 AM</td><td>High</td><td style="color:var(--faint)">&#9660;</td></tr>
+            <tr class="selected"><td style="color:var(--faint)">3</td><td><span class="chk on"></span></td><td><a href="#">Tax-001112</a></td><td><a href="#">Client Audit Inquiry</a></td><td><a href="#">Daniel Ortiz</a> <span class="badge b-new" style="margin-left:6px">Departing</span></td><td>Working</td><td>8/28/2026, 3:41 PM</td><td>Medium</td><td style="color:var(--faint)">&#9660;</td></tr>
+            <tr class="selected"><td style="color:var(--faint)">4</td><td><span class="chk on"></span></td><td><a href="#">Tax-001113</a></td><td><a href="#">Missing K-1 Request</a></td><td><a href="#">Daniel Ortiz</a> <span class="badge b-new" style="margin-left:6px">Departing</span></td><td>Waiting on Client</td><td>8/28/2026, 4:02 PM</td><td>High</td><td style="color:var(--faint)">&#9660;</td></tr>
+            <tr><td style="color:var(--faint)">5</td><td><span class="chk"></span></td><td><a href="#">Tax-001118</a></td><td><a href="#">Form 1120S Amended Return</a></td><td><a href="#">Sarah Miller</a></td><td>Working</td><td>8/27/2026, 10:05 AM</td><td>Medium</td><td style="color:var(--faint)">&#9660;</td></tr>
+            <tr><td style="color:var(--faint)">6</td><td><span class="chk"></span></td><td><a href="#">Tax-001117</a></td><td><a href="#">Quarterly Estimated Payment Question</a></td><td><a href="#">Tax Preparation Queue</a></td><td>New</td><td>8/27/2026, 9:48 AM</td><td>Low</td><td style="color:var(--faint)">&#9660;</td></tr>
+            <tr><td style="color:var(--faint)">7</td><td><span class="chk"></span></td><td><a href="#">Tax-001116</a></td><td><a href="#">Payroll Tax Deposit Discrepancy</a></td><td><a href="#">Payroll Services Queue</a></td><td>New</td><td>8/26/2026, 2:30 PM</td><td>Medium</td><td style="color:var(--faint)">&#9660;</td></tr>
+            <tr><td style="color:var(--faint)">8</td><td><span class="chk"></span></td><td><a href="#">Tax-001115</a></td><td><a href="#">Portal Login Blocked</a></td><td><a href="#">Client Portal Support</a></td><td>Working</td><td>8/26/2026, 11:12 AM</td><td>Low</td><td style="color:var(--faint)">&#9660;</td></tr>
+            <tr><td style="color:var(--faint)">9</td><td><span class="chk"></span></td><td><a href="#">Tax-001114</a></td><td><a href="#">CP2000 Notice Response</a></td><td><a href="#">Audit Response Queue</a></td><td>New</td><td>8/25/2026, 4:55 PM</td><td>High</td><td style="color:var(--faint)">&#9660;</td></tr>
+            <tr><td style="color:var(--faint)">10</td><td><span class="chk"></span></td><td><a href="#">Tax-001111</a></td><td><a href="#">1099-NEC Correction Request</a></td><td><a href="#">Sarah Miller</a></td><td>Closed</td><td>8/25/2026, 9:20 AM</td><td>Low</td><td style="color:var(--faint)">&#9660;</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="util"><span class="tri">&#8250;&#8250;</span> Macros <span>&#9889; Recent Items</span><span>&#9889; Rewind</span><span>&#9889; Tool - Q Demo Tracker</span></div>
+</div>
+
+<div style="height:48px"></div>
+</body>
+</html>
