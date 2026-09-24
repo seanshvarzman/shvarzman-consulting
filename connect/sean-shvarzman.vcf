@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Shvarzman;Sean;;;
+FN:Sean Shvarzman
+ORG:Shvarzman Consulting
+TITLE:Contact Center, AI & Salesforce Consultant
+TEL;TYPE=CELL:+13057468405
+EMAIL;TYPE=WORK:sean@shvarzmanconsulting.com
+URL:https://shvarzmanconsulting.com
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/sean-shvarzman-733a7818a/
+NOTE:Met at ICMI Orlando. Contact center, AI & Salesforce transformation. Measured by results, not slides.
+END:VCARD

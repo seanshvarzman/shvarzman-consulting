@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0B1F33">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Connect with Sean Shvarzman</title>
+<meta name="description" content="Save Sean's contact, leave your details, or book a free 30-minute call. Shvarzman Consulting: contact center, AI and Salesforce transformation.">
+<meta property="og:title" content="Connect with Sean Shvarzman">
+<meta property="og:description" content="Contact center, AI and Salesforce transformation. Save my contact or book a free 30-minute call.">
+<meta property="og:image" content="https://shvarzmanconsulting.com/og-image.png">
+<meta property="og:url" content="https://shvarzmanconsulting.com/connect/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --ink:#0B1F33;--steel:#1E3A5F;--azure:#2D6CDF;--azure-deep:#1F55B8;--azure-soft:#E8F0FD;
+    --mist:#F5F8FC;--paper:#FFFFFF;--line:#E2E8F0;--slate:#33475B;--slate-soft:#5B6B7C;--green:#16B981;
+    --hero-ink:#DCE7F5;--hero-muted:#93AACB;
+    --radius:16px;--radius-sm:12px;
+    --shadow:0 18px 40px -22px rgba(11,31,51,.35);
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  [hidden]{display:none!important}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--mist);color:var(--ink);font-family:'Inter',system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,.btn,.stat b,.mark-name{font-family:'Sora','Inter',system-ui,sans-serif}
+  a{color:var(--azure)}
+  :focus-visible{outline:3px solid var(--azure);outline-offset:3px}
+
+  /* Hero */
+  .hero{position:relative;overflow:hidden;background:linear-gradient(165deg,var(--steel) 0%,var(--ink) 70%);color:#fff;padding:calc(28px + env(safe-area-inset-top,0px)) 20px 96px;text-align:center;isolation:isolate}
+  .hero::before{content:"";position:absolute;inset:-40% -20% auto auto;width:520px;height:520px;border-radius:50%;background:radial-gradient(closest-side,rgba(45,108,223,.55),rgba(45,108,223,0));z-index:-1}
+  .hero::after{content:"";position:absolute;left:-160px;bottom:-220px;width:420px;height:420px;border-radius:50%;background:radial-gradient(closest-side,rgba(22,185,129,.22),rgba(22,185,129,0));z-index:-1}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--hero-muted);margin:0 0 22px}
+  .eyebrow i{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(22,185,129,.22)}
+  .avatar{width:84px;height:84px;margin:0 auto 14px;display:block;filter:drop-shadow(0 12px 24px rgba(0,0,0,.35))}
+  .mark-name{margin:0;font-size:30px;font-weight:700;letter-spacing:-.02em;line-height:1.15;text-wrap:balance}
+  .role{margin:6px 0 0;font-size:15px;color:var(--hero-ink);font-weight:500}
+  .company{margin:2px 0 0;font-size:13px;color:var(--hero-muted);font-weight:500;letter-spacing:.02em}
+  .stats{display:flex;justify-content:center;gap:10px;margin:22px auto 0;max-width:420px}
+  .stat{flex:1;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius-sm);padding:10px 8px;backdrop-filter:blur(6px)}
+  .stat b{display:block;font-size:20px;font-weight:700;color:#fff;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .stat span{display:block;font-size:11.5px;color:var(--hero-muted);font-weight:500;margin-top:2px}
+
+  /* Stack */
+  .stack{position:relative;z-index:1;max-width:520px;margin:-64px auto 0;padding:0 16px;display:flex;flex-direction:column;gap:14px}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+  .card h2{margin:0 0 4px;font-size:18px;font-weight:700;letter-spacing:-.01em;color:var(--ink)}
+  .card p{margin:0 0 16px;color:var(--slate-soft);font-size:14.5px}
+
+  .btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:15px 18px;border-radius:var(--radius-sm);font-weight:600;font-size:16px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s ease,box-shadow .2s ease,background .2s ease}
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn-primary{background:var(--azure);color:#fff;box-shadow:0 14px 30px -14px rgba(45,108,223,.7)}
+  .btn-primary:hover{background:var(--azure-deep)}
+  .btn-navy{background:var(--steel);color:#fff;box-shadow:0 14px 30px -14px rgba(30,58,95,.6)}
+  .btn-navy:hover{background:var(--ink)}
+  .btn:active{transform:translateY(1px)}
+
+  .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+  .tile{display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 8px 12px;border:1.5px solid var(--line);border-radius:var(--radius-sm);text-decoration:none;color:var(--steel);font-weight:600;font-size:13px;background:var(--paper);transition:border-color .2s,background .2s}
+  .tile:hover{border-color:var(--azure);background:var(--azure-soft)}
+  .tile svg{width:22px;height:22px}
+  .tile small{font-weight:500;color:var(--slate-soft);font-size:11.5px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+  .form-wrap{border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;background:var(--mist)}
+  .form-wrap iframe{display:block;width:100%;border:0;min-height:760px;background:#fff}
+  .form-fallback{padding:18px;text-align:center}
+  .form-fallback p{margin:0 0 12px}
+
+  .clients{max-width:520px;margin:6px auto 0;padding:12px 24px 0;text-align:center;font-size:12px;color:var(--slate-soft)}
+  .clients .label{letter-spacing:.12em;text-transform:uppercase;font-weight:600;font-size:11px}
+  .clients .names{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 14px;margin-top:8px;color:var(--slate);font-weight:500;font-size:13px}
+  .clients .names span{white-space:nowrap}
+
+  .foot{max-width:520px;margin:18px auto calc(40px + env(safe-area-inset-bottom,0px));padding:0 24px;text-align:center;font-size:13.5px;color:var(--slate-soft)}
+  .foot .tag{display:block;color:var(--steel);font-weight:600;font-family:'Sora',sans-serif;margin-bottom:6px}
+  .foot a{text-decoration:none;font-weight:500}
+
+  @media (min-width:640px){
+    .hero{padding-top:44px;padding-bottom:112px}
+    .mark-name{font-size:36px}
+    .stack{margin-top:-76px}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <p class="eyebrow"><i></i>Met at ICMI Contact Center Expo · Orlando</p>
+  <svg class="avatar" viewBox="0 0 64 64" aria-hidden="true">
+    <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2D6CDF"/><stop offset="1" stop-color="#16B981"/></linearGradient></defs>
+    <rect width="64" height="64" rx="16" fill="url(#g)"/>
+    <text x="33" y="32" fill="#fff" font-family="Sora, Arial Black, Arial, sans-serif" font-size="28" font-weight="800" letter-spacing="1" text-anchor="middle" dominant-baseline="central">SS</text>
+  </svg>
+  <h1 class="mark-name">Sean Shvarzman</h1>
+  <p class="role">Contact Center, AI &amp; Salesforce Consultant</p>
+  <p class="company">Shvarzman Consulting · Miami, FL</p>
+  <div class="stats">
+    <div class="stat"><b>30+</b><span>enterprise CX programs</span></div>
+    <div class="stat"><b>$30M+</b><span>delivered value</span></div>
+    <div class="stat"><b>30 min</b><span>free first call</span></div>
+  </div>
+</header>
+
+<main class="stack">
+  <section class="card">
+    <h2>Save my contact</h2>
+    <p>One tap adds my phone, email, LinkedIn and site to your contacts.</p>
+    <a class="btn btn-navy" href="sean-shvarzman.vcf" download="sean-shvarzman.vcf">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="11" r="2.2"/><path d="M5.5 17c.6-1.7 2-2.6 3.5-2.6s2.9.9 3.5 2.6M14.5 9.5H18M14.5 13H18"/></svg>
+      Save Sean to Contacts
+    </a>
+    <div class="tiles">
+      <a class="tile" href="tel:+13057468405">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3.5l1.5 4-2 1.5a12 12 0 0 0 6.5 6.5L16 14l4 1.5V19a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+        Call<small>(305) 746-8405</small>
+      </a>
+      <a class="tile" href="mailto:sean@shvarzmanconsulting.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg>
+        Email<small>Work email</small>
+      </a>
+      <a class="tile" href="https://www.linkedin.com/in/sean-shvarzman-733a7818a/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.5h-3V21h3V8.5zM5 3.5a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5zM21 13.4c0-3.4-1.8-5.2-4.4-5.2-1.9 0-2.8 1-3.3 1.8V8.5h-3V21h3v-6.6c0-1.7.6-2.9 2.2-2.9 1.5 0 2.1 1.1 2.1 2.9V21H21v-7.6z"/></svg>
+        LinkedIn<small>Profile</small>
+      </a>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Leave your info</h2>
+    <p>30 seconds. Tell me your biggest contact center challenge and I'll follow up with something actually useful.</p>
+    <div class="form-wrap">
+      <iframe id="lead-form" data-src="GOOGLE_FORM_EMBED_URL" loading="lazy" title="Contact form" hidden></iframe>
+      <div class="form-fallback" id="form-fallback">
+        <p>Prefer email? Send me your name, company and the challenge you're working on.</p>
+        <a class="btn btn-primary" href="mailto:sean@shvarzmanconsulting.com?subject=ICMI%20follow-up&amp;body=Name%3A%0ACompany%3A%0ABiggest%20contact%20center%20challenge%3A%0A">Email my details</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Or book 30 minutes, free</h2>
+    <p>Tell me where your contact center or Salesforce is stuck. If I can help, we'll map out what's possible. If I can't, I'll tell you that too.</p>
+    <a class="btn btn-primary" href="https://shvarzmanconsulting.com/#book">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="m9.5 15.5 1.8 1.8 3.7-3.8"/></svg>
+      Book a free 30-min call
+    </a>
+  </section>
+</main>
+
+<div class="clients">
+  <div class="label">Trusted by teams at</div>
+  <div class="names"><span>Southwest</span><span>McKesson</span><span>Norwegian Cruise Line</span><span>Patagonia</span><span>UCSF</span><span>Amica</span><span>Texas Oncology</span></div>
+</div>
+
+<p class="foot"><span class="tag">Measured by results, not slides.</span><a href="https://shvarzmanconsulting.com">shvarzmanconsulting.com</a> · <a href="tel:+13057468405">(305) 746-8405</a></p>
+
+<script>
+  (function(){
+    var f=document.getElementById('lead-form'),fb=document.getElementById('form-fallback');
+    var src=f.getAttribute('data-src')||'';
+    if(/^https:\/\/docs\.google\.com\/forms\//.test(src)){f.src=src;f.hidden=false;fb.hidden=true;}
+  })();
+</script>
+</body>
+</html>
