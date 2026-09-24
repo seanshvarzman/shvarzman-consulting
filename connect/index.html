@@ -41,7 +41,7 @@
   .mark-name{margin:0;font-size:30px;font-weight:700;letter-spacing:-.02em;line-height:1.15;text-wrap:balance}
   .role{margin:6px 0 0;font-size:15px;color:var(--hero-ink);font-weight:500}
   .company{margin:2px 0 0;font-size:13px;color:var(--hero-muted);font-weight:500;letter-spacing:.02em}
-  .stats{display:flex;justify-content:center;gap:10px;margin:22px auto 0;max-width:420px}
+  .stats{display:flex;justify-content:center;gap:10px;margin:22px auto 0;max-width:340px}
   .stat{flex:1;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius-sm);padding:10px 8px;backdrop-filter:blur(6px)}
   .stat b{display:block;font-size:20px;font-weight:700;color:#fff;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
   .stat span{display:block;font-size:11.5px;color:var(--hero-muted);font-weight:500;margin-top:2px}
@@ -66,11 +66,24 @@
   .tile svg{width:22px;height:22px}
   .tile small{font-weight:500;color:var(--slate-soft);font-size:11.5px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
-  .form-wrap{border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;background:var(--mist)}
-  .form-wrap iframe{display:block;width:100%;border:0;min-height:760px;background:#fff}
-  .form-fallback{padding:18px;text-align:center}
-  .form-fallback p{margin:0 0 12px}
-
+  form{display:flex;flex-direction:column;gap:12px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .field{display:flex;flex-direction:column;gap:5px;min-width:0}
+  .field span{font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--slate-soft)}
+  .field input{width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--mist);border:1.5px solid var(--line);border-radius:10px;padding:12px 13px;transition:border-color .15s,background .15s,box-shadow .15s}
+  .field input::placeholder{color:#9AA7B5}
+  .field input:focus{outline:none;border-color:var(--azure);background:#fff;box-shadow:0 0 0 4px rgba(45,108,223,.14)}
+  .field input.bad{border-color:#D14343;background:#FFF6F6}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+  form .btn{margin-top:4px}
+  .btn[disabled]{opacity:.7;cursor:progress}
+  .fine{margin:2px 0 0!important;font-size:12px!important;text-align:center}
+  .done{text-align:center;padding:10px 0 4px}
+  .done-icon{width:56px;height:56px;margin:0 auto 12px;border-radius:50%;background:rgba(22,185,129,.14);color:var(--green);display:flex;align-items:center;justify-content:center}
+  .done-icon svg{width:28px;height:28px}
+  .done h3{margin:0 0 6px;font-family:'Sora',sans-serif;font-size:20px;color:var(--ink)}
+  .done p{margin:0;color:var(--slate-soft);font-size:14.5px}
+  .fail{text-align:center;padding:6px 0 0}
   .clients{max-width:520px;margin:6px auto 0;padding:12px 24px 0;text-align:center;font-size:12px;color:var(--slate-soft)}
   .clients .label{letter-spacing:.12em;text-transform:uppercase;font-weight:600;font-size:11px}
   .clients .names{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 14px;margin-top:8px;color:var(--slate);font-weight:500;font-size:13px}
@@ -103,7 +116,6 @@
   <div class="stats">
     <div class="stat"><b>30+</b><span>enterprise CX programs</span></div>
     <div class="stat"><b>$30M+</b><span>delivered value</span></div>
-    <div class="stat"><b>30 min</b><span>free first call</span></div>
   </div>
 </header>
 
@@ -131,25 +143,36 @@
     </div>
   </section>
 
-  <section class="card">
-    <h2>Leave your info</h2>
-    <p>30 seconds. Tell me your biggest contact center challenge and I'll follow up with something actually useful.</p>
-    <div class="form-wrap">
-      <iframe id="lead-form" data-src="GOOGLE_FORM_EMBED_URL" loading="lazy" title="Contact form" hidden></iframe>
-      <div class="form-fallback" id="form-fallback">
-        <p>Prefer email? Send me your name, company and the challenge you're working on.</p>
-        <a class="btn btn-primary" href="mailto:sean@shvarzmanconsulting.com?subject=ICMI%20follow-up&amp;body=Name%3A%0ACompany%3A%0ABiggest%20contact%20center%20challenge%3A%0A">Email my details</a>
+  <section class="card" id="lead-card">
+    <h2>Let's stay in touch</h2>
+    <p>Six fields, thirty seconds. I'll follow up personally, no newsletter.</p>
+    <form id="lead-form" novalidate>
+      <div class="grid2">
+        <label class="field"><span>First name</span><input name="first" type="text" autocomplete="given-name" required></label>
+        <label class="field"><span>Last name</span><input name="last" type="text" autocomplete="family-name" required></label>
       </div>
+      <div class="grid2">
+        <label class="field"><span>Company</span><input name="company" type="text" autocomplete="organization" required></label>
+        <label class="field"><span>Role</span><input name="role" type="text" autocomplete="organization-title" placeholder="VP Customer Care" required></label>
+      </div>
+      <label class="field"><span>Phone</span><input name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(305) 555-0123" required></label>
+      <label class="field"><span>Email</span><input name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@company.com" required></label>
+      <input name="website" type="text" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn-primary" type="submit" id="lead-submit">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h13M13 6l6 6-6 6"/></svg>
+        Add me to Sean's list
+      </button>
+      <p class="fine">Your details go straight to Sean's private lead sheet and nowhere else.</p>
+    </form>
+    <div class="done" id="lead-done" hidden>
+      <div class="done-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg></div>
+      <h3>You're on the list.</h3>
+      <p>Thanks, <b id="done-name"></b>. I'll reach out within a day. Meanwhile, my details are one tap above.</p>
     </div>
-  </section>
-
-  <section class="card">
-    <h2>Or book 30 minutes, free</h2>
-    <p>Tell me where your contact center or Salesforce is stuck. If I can help, we'll map out what's possible. If I can't, I'll tell you that too.</p>
-    <a class="btn btn-primary" href="https://shvarzmanconsulting.com/#book">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="m9.5 15.5 1.8 1.8 3.7-3.8"/></svg>
-      Book a free 30-min call
-    </a>
+    <div class="fail" id="lead-fail" hidden>
+      <p>That didn't go through. Send it by email instead and I'll add you by hand.</p>
+      <a class="btn btn-navy" id="lead-mailto" href="mailto:sean@shvarzmanconsulting.com?subject=ICMI%20follow-up">Email my details</a>
+    </div>
   </section>
 </main>
 
@@ -162,9 +185,34 @@
 
 <script>
   (function(){
-    var f=document.getElementById('lead-form'),fb=document.getElementById('form-fallback');
-    var src=f.getAttribute('data-src')||'';
-    if(/^https:\/\/docs\.google\.com\/forms\//.test(src)){f.src=src;f.hidden=false;fb.hidden=true;}
+    // Google Apps Script web app bound to the ICMI lead sheet. Leave empty until deployed.
+    var LEAD_ENDPOINT = "LEAD_ENDPOINT_URL";
+    var form=document.getElementById('lead-form'),btn=document.getElementById('lead-submit'),
+        done=document.getElementById('lead-done'),fail=document.getElementById('lead-fail');
+    function val(n){return (form.elements[n].value||'').trim();}
+    function mailtoFallback(){
+      var b='First name: '+val('first')+'\nLast name: '+val('last')+'\nCompany: '+val('company')+'\nRole: '+val('role')+'\nPhone: '+val('phone')+'\nEmail: '+val('email')+'\n';
+      document.getElementById('lead-mailto').href='mailto:sean@shvarzmanconsulting.com?subject=ICMI%20follow-up&body='+encodeURIComponent(b);
+      form.hidden=true; fail.hidden=false;
+    }
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var ok=true;
+      ['first','last','company','role','phone','email'].forEach(function(n){
+        var el=form.elements[n], good=el.value.trim().length>0 && (n!=='email' || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim()));
+        el.classList.toggle('bad',!good); if(!good && ok){el.focus();} ok=ok&&good;
+      });
+      if(!ok) return;
+      if(val('website')) return; // honeypot
+      if(!/^https:\/\/script\.google\.com\//.test(LEAD_ENDPOINT)){ mailtoFallback(); return; }
+      btn.disabled=true; btn.textContent='Adding you…';
+      var data=new URLSearchParams({first:val('first'),last:val('last'),company:val('company'),role:val('role'),phone:val('phone'),email:val('email'),source:'connect page',ua:navigator.userAgent.slice(0,120)});
+      fetch(LEAD_ENDPOINT,{method:'POST',mode:'no-cors',body:data}).then(function(){
+        document.getElementById('done-name').textContent=val('first');
+        form.hidden=true; done.hidden=false;
+        try{document.getElementById('lead-card').scrollIntoView({behavior:'smooth',block:'start'});}catch(_){}
+      }).catch(function(){ btn.disabled=false; btn.textContent='Add me to Sean\'s list'; mailtoFallback(); });
+    });
   })();
 </script>
 </body>
