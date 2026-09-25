@@ -60,6 +60,7 @@
   .btn-navy:hover{background:var(--ink)}
   .btn:active{transform:translateY(1px)}
 
+  .hint{margin:-4px 0 12px!important;font-size:12.5px!important;text-align:center;color:var(--slate-soft)}
   .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
   .tile{display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 8px 12px;border:1.5px solid var(--line);border-radius:var(--radius-sm);text-decoration:none;color:var(--steel);font-weight:600;font-size:13px;background:var(--paper);transition:border-color .2s,background .2s}
   .tile:hover{border-color:var(--azure);background:var(--azure-soft)}
@@ -123,10 +124,11 @@
   <section class="card">
     <h2>Save my contact</h2>
     <p>One tap adds my phone, email, LinkedIn and site to your contacts.</p>
-    <a class="btn btn-navy" href="sean-shvarzman.vcf" download="sean-shvarzman.vcf">
+    <a class="btn btn-navy" id="save-contact" href="sean-shvarzman.vcf" type="text/vcard">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="11" r="2.2"/><path d="M5.5 17c.6-1.7 2-2.6 3.5-2.6s2.9.9 3.5 2.6M14.5 9.5H18M14.5 13H18"/></svg>
       Save Sean to Contacts
     </a>
+    <p class="hint" id="android-hint" hidden>On Android: after the download, tap the file in your notifications and choose Contacts.</p>
     <div class="tiles">
       <a class="tile" href="tel:+13057468405">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3.5l1.5 4-2 1.5a12 12 0 0 0 6.5 6.5L16 14l4 1.5V19a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
@@ -185,6 +187,7 @@
 
 <script>
   (function(){
+    if(/Android/i.test(navigator.userAgent)){document.getElementById('android-hint').hidden=false;}
     // Google Apps Script web app bound to the ICMI lead sheet. Leave empty until deployed.
     var LEAD_ENDPOINT = "https://script.google.com/macros/s/AKfycbx_0ugFjt4zFYcXXyGIZxGfeIr-5GvgJKmgkBjF5VIHlzUrNrCJ_a5Ql25_Kqv7tWxZ0Q/exec";
     var form=document.getElementById('lead-form'),btn=document.getElementById('lead-submit'),
