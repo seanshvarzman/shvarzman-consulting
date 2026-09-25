@@ -162,7 +162,7 @@
       <input name="website" type="text" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button class="btn btn-primary" type="submit" id="lead-submit">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h13M13 6l6 6-6 6"/></svg>
-        Add me to Sean's list
+        Submit
       </button>
       <p class="fine">Your details go straight to Sean's private lead sheet and nowhere else.</p>
     </form>
@@ -214,7 +214,7 @@
         document.getElementById('done-name').textContent=val('first');
         form.hidden=true; done.hidden=false;
         try{document.getElementById('lead-card').scrollIntoView({behavior:'smooth',block:'start'});}catch(_){}
-      }).catch(function(){ btn.disabled=false; btn.textContent='Add me to Sean\'s list'; mailtoFallback(); });
+      }).catch(function(){ btn.disabled=false; btn.textContent='Submit'; mailtoFallback(); });
     });
   })();
 </script>
