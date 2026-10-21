@@ -320,6 +320,12 @@
   .sec-head p{margin-top:14px;font-size:1.02rem;color:var(--slate)}
   .tint{background:var(--mist)}
   #faq{background:var(--paper)}
+  .svc-links{text-align:center;margin-top:30px;font-size:.95rem;color:var(--slate-soft)}
+  .svc-links a{color:var(--azure);font-weight:500;white-space:nowrap}
+  .svc-links a+a::before{content:"·";color:var(--line);margin:0 10px;font-weight:700}
+  .foot-links{width:100%;display:flex;flex-wrap:wrap;gap:8px 22px;font-size:.88rem;order:3}
+  .foot-links a{color:var(--slate-soft)}.foot-links a:hover{color:var(--azure)}
+  .calc-note a{color:var(--azure)}
   .faq-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px 44px;max-width:1000px;margin:0 auto}
   .faq-item h3{font-size:1.1rem;margin-bottom:8px;color:var(--ink)}
   .faq-item p{color:var(--slate);font-size:.98rem;line-height:1.65}
@@ -692,6 +698,7 @@
         <p>The full journey under one partner: strategy, design, build, and measurable results. Discovery through go-live and beyond.</p>
       </div>
     </div>
+    <p class="svc-links">Go deeper: <a href="/salesforce-service-cloud-voice/">Service Cloud Voice</a><a href="/agentforce/">Agentforce</a><a href="/ccaas-migration/">CCaaS migration</a><a href="/ai-deflection-roi-calculator/">ROI calculator</a></p>
   </div>
 </section>
 
@@ -853,7 +860,7 @@
         <div class="calc-card"><div class="n" id="calcHours">800</div><div class="l">Agent hours freed per month</div></div>
         <div class="calc-card"><div class="n" id="calcDollars">$336,000</div><div class="l">Estimated annual cost recovered</div></div>
       </div>
-      <p class="calc-note">Assumes ~30% deflection of routine contacts. The real target is one of the first KPIs we define together.</p>
+      <p class="calc-note">Assumes ~30% deflection of routine contacts. The real target is one of the first KPIs we define together. <a href="/ai-deflection-roi-calculator/">See the full formula and assumptions →</a></p>
       <div class="calc-cta"><a href="#book" class="btn btn-navy">Let's define your real numbers →</a></div>
     </div>
   </div>
@@ -895,6 +902,7 @@
 <footer>
   <div class="wrap foot">
     <a href="#top" class="brand"><span class="mark">SS</span> Shvarzman Consulting</a>
+    <nav class="foot-links" aria-label="Services"><a href="/salesforce-service-cloud-voice/">Service Cloud Voice</a><a href="/agentforce/">Agentforce</a><a href="/ccaas-migration/">CCaaS migration</a><a href="/ai-deflection-roi-calculator/">AI deflection ROI calculator</a></nav>
     <div class="contact">Miami, FL · <a href="mailto:Sean@shvarzmanconsulting.com">Sean@ShvarzmanConsulting.com</a> · (305) 746-8405 · <a href="https://www.linkedin.com/in/sean-shvarzman-733a7818a/" target="_blank" rel="noopener">LinkedIn</a></div>
   </div>
 </footer>
