@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /poc/
+Disallow: /connect/
+
+Sitemap: https://shvarzmanconsulting.com/sitemap.xml
