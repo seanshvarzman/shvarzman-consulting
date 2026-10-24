@@ -224,14 +224,14 @@
 <p class="def">A CCaaS migration to Salesforce replaces or integrates your contact center platform so that calls, messaging and cases are routed, handled and reported in Service Cloud. The telephony lands on Service Cloud Voice, either bundled Amazon Connect or your existing platform through partner telephony, or on Agentforce Contact Center, Salesforce's newer native option. The agent desktop becomes the Service Console. IVRs, queues, skills, recordings and reports are redesigned rather than copied, and menu trees are increasingly replaced by Agentforce Voice agents.</p>
 <p>The two big architectural choices are whether to keep the existing CCaaS as the telephony layer under Salesforce or to retire it, and whether to rebuild the IVR as a shorter, intent-first flow or replace it with a generative AI voice agent that lets callers say what they need. Everything else, from number porting to agent training, follows from those two.</p>
 
-<h2>Platforms I migrate from</h2>
+<h2>Platforms I migrate from, or keep underneath</h2>
 <div class="table-wrap"><table class="kpi-table">
   <thead><tr><th>Coming from</th><th>Typical telephony decision</th><th>What usually drives the timeline</th></tr></thead>
   <tbody>
     <tr><td><b>Genesys Cloud / Engage</b></td><td>Keep as partner telephony first, consolidate later</td><td>Contract dates, IVR depth, WFM integration</td></tr>
     <tr><td><b>Five9</b></td><td>Depends on outbound dialer needs</td><td>Campaign and dialer parity</td></tr>
-    <tr><td><b>NICE CXone</b></td><td>Partner telephony or Amazon Connect</td><td>Workforce management and quality parity</td></tr>
-    <tr><td><b>Avaya / Cisco on-premise</b></td><td>Usually Amazon Connect</td><td>Carrier porting, recording retention, compliance</td></tr>
+    <tr><td><b>NICE CXone</b></td><td>Partner telephony first; Amazon Connect or Agentforce Contact Center to consolidate</td><td>Workforce management and quality parity</td></tr>
+    <tr><td><b>Avaya / Cisco on-premise</b></td><td>Amazon Connect or Agentforce Contact Center</td><td>Carrier porting, recording retention, compliance</td></tr>
     <tr><td><b>Standalone Amazon Connect</b></td><td>Attach Service Cloud Voice to the instance you own</td><td>Routing redesign; smoothest path of the five</td></tr>
   </tbody></table></div>
 <p>The decision column is the usual starting point, not a rule. Contract dates and what the current platform does well decide it in practice.</p>
@@ -245,7 +245,7 @@
   <li><strong>IVR replacement and self-service redesign.</strong> Intent-first flows that identify the customer and the reason, and an Agentforce Voice agent in place of the menu tree wherever it pays back.</li>
   <li><strong>Build and integration.</strong> Routing, console, CTI, recording, WFM and quality integrations, dashboards.</li>
   <li><strong>Wave cutover.</strong> Migration by queue, parallel running, number porting coordinated with carriers, training, hypercare and a measured handoff.</li>
-  <li><strong>Decommission.</strong> Contract exits and shutting down the old platform without losing recordings or history you are required to keep.</li>
+  <li><strong>Decommission, when consolidating.</strong> Contract exits and shutting down the old platform without losing recordings or history you are required to keep. When the platform stays underneath as partner telephony, this step does not apply.</li>
 </ul>
 
 <h2>How the engagement runs</h2>
