@@ -177,7 +177,7 @@
      "name": "Can Agentforce work on voice?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Yes, on Service Cloud Voice. I recommend proving topics on chat and messaging first, then extending the same agent to voice."
+      "text": "Yes. I build Agentforce Voice agents and expose them on the phone channel through Service Cloud Voice with partner telephony, or on Agentforce Contact Center, Salesforce's newer native telephony. I recommend proving topics on chat and messaging first, then extending the same agent to voice, where it replaces IVR menus intent by intent."
      }
     }
    ]
@@ -195,7 +195,7 @@
       <a href="/#roi">Impact</a>
       <div class="nav-item"><a href="/#services" aria-haspopup="true">Services</a>
         <div class="nav-menu"><div class="nav-menu-inner">
-          <a href="/salesforce-service-cloud-voice/">Service Cloud Voice<small>Telephony inside Salesforce</small></a>
+          <a href="/salesforce-service-cloud-voice/">Service Cloud Voice<small>Telephony and voice agents in Salesforce</small></a>
           <a href="/agentforce/">Agentforce<small>AI agents for service</small></a>
           <a href="/ccaas-migration/">CCaaS migration<small>Genesys, Five9, NICE to Salesforce</small></a>
           <a href="/ai-deflection-roi-calculator/">AI deflection ROI calculator<small>Formula and assumptions</small></a>
@@ -222,11 +222,12 @@
 <section class="article"><div class="wrap">
 <h2>What Agentforce is</h2>
 <p class="def">Agentforce is Salesforce's platform for building and running AI agents that take actions, not just answer questions. A service agent is configured with topics it may handle, instructions for each, and actions it can call, such as Flows, Apex and prompt templates. It is grounded in CRM records and knowledge through Data Cloud, runs behind the Einstein Trust Layer, and hands conversations to a human in Service Cloud with the full transcript when it should.</p>
-<p>Two sides matter for a contact center. Customer-facing agents work on web chat, SMS, WhatsApp, in-app messaging and voice. Rep-facing assistance drafts replies, summarizes cases and surfaces knowledge while a human handles the conversation. The second is lower risk and often the better first step.</p>
+<p>Two sides matter for a contact center. Customer-facing agents work on web chat, SMS, WhatsApp, in-app messaging and voice. Rep-facing assistance drafts replies, summarizes cases and surfaces knowledge while a human handles the conversation. The second is lower risk and often the better first step. On the phone, Agentforce Voice agents run through Service Cloud Voice with partner telephony or on Agentforce Contact Center, and they are the generative replacement for the IVR menu tree.</p>
 
 <h2>Where it pays back</h2>
 <ul>
   <li>High volumes of a small number of intents: order status, appointment changes, password and access issues, billing questions, document requests.</li>
+  <li>IVR menu trees that could be a conversation: callers say what they need instead of navigating options.</li>
   <li>Knowledge that already exists but agents spend minutes finding.</li>
   <li>After-hours volume that today waits for the morning queue.</li>
   <li>Agent after-call work that is mostly summarizing what was just said.</li>
@@ -239,7 +240,7 @@
   <li><strong>Intent and value scoping.</strong> Contact-reason analysis from your real data to pick the first topics by volume, resolvability and risk.</li>
   <li><strong>Grounding.</strong> Knowledge cleanup, Data Cloud or CRM grounding, and the retrieval setup that keeps answers specific to your business.</li>
   <li><strong>Agent build.</strong> Topics, instructions, actions, guardrails, escalation rules and the handoff to Service Cloud with context.</li>
-  <li><strong>Channel deployment.</strong> Web, messaging and, once stable, voice on Service Cloud Voice.</li>
+  <li><strong>Channel deployment.</strong> Web and messaging first, then voice: Agentforce Voice agents exposed on the phone line through Service Cloud Voice with partner telephony or on Agentforce Contact Center.</li>
   <li><strong>Rep assist.</strong> Case summaries, reply recommendations and knowledge suggestions in the Service Console.</li>
   <li><strong>Measurement.</strong> Resolution rate per topic, containment, handoff quality, CSAT on automated conversations, and the cost model behind the business case.</li>
 </ul>
@@ -270,8 +271,8 @@
   <li><strong>Hiding the human.</strong> A clear, fast path to a person with the transcript attached is what makes customers trust the agent at all.</li>
 </ul>
 </div></section>
-<section id="faq"><div class="wrap"><div class="sec-head"><span class="eyebrow">Questions</span><h2>Frequently asked questions</h2></div><div class="faq-grid"><div class="faq-item"><h3>What is the difference between Agentforce and Einstein Bots?</h3><p>Einstein Bots follow dialog trees you script in advance. Agentforce agents reason over instructions and knowledge to decide what to do, call actions in Salesforce, and handle phrasing they were never scripted for. Agentforce replaces the bot for most new service deployments.</p></div><div class="faq-item"><h3>What deflection rate should we expect?</h3><p>It depends on your intent mix and knowledge quality. I plan around roughly 30% of routine contacts as a conservative starting point and set the real target per topic during discovery, then measure resolution rather than containment.</p></div><div class="faq-item"><h3>Does Agentforce need Data Cloud?</h3><p>Grounding in CRM records and knowledge articles can start without a separate data program, but Data Cloud is how you bring in data from outside Salesforce and unify identities. I scope it based on where the answers actually live.</p></div><div class="faq-item"><h3>How do you keep the agent from making things up?</h3><p>Tight topic scoping, instructions that require grounding before answering, the Einstein Trust Layer, guardrails on out-of-scope requests, and a human handoff that is easy to reach. Then test with real transcripts before launch.</p></div><div class="faq-item"><h3>Can Agentforce work on voice?</h3><p>Yes, on Service Cloud Voice. I recommend proving topics on chat and messaging first, then extending the same agent to voice.</p></div></div></div></section>
-<section class="tint"><div class="wrap"><div class="sec-head"><span class="eyebrow">Related</span><h2>Go deeper</h2></div><div class="related"><a class="rel-card" href="/salesforce-service-cloud-voice/"><b>Service Cloud Voice</b><span>Telephony inside Salesforce: routing, console, transcription and AI.</span></a><a class="rel-card" href="/ccaas-migration/"><b>CCaaS migration</b><span>Genesys, Five9, NICE or Avaya to Salesforce, in waves by queue.</span></a><a class="rel-card" href="/ai-deflection-roi-calculator/"><b>AI deflection ROI calculator</b><span>Estimate hours and cost recovered from automating routine contacts.</span></a></div></div></section>
+<section id="faq"><div class="wrap"><div class="sec-head"><span class="eyebrow">Questions</span><h2>Frequently asked questions</h2></div><div class="faq-grid"><div class="faq-item"><h3>What is the difference between Agentforce and Einstein Bots?</h3><p>Einstein Bots follow dialog trees you script in advance. Agentforce agents reason over instructions and knowledge to decide what to do, call actions in Salesforce, and handle phrasing they were never scripted for. Agentforce replaces the bot for most new service deployments.</p></div><div class="faq-item"><h3>What deflection rate should we expect?</h3><p>It depends on your intent mix and knowledge quality. I plan around roughly 30% of routine contacts as a conservative starting point and set the real target per topic during discovery, then measure resolution rather than containment.</p></div><div class="faq-item"><h3>Does Agentforce need Data Cloud?</h3><p>Grounding in CRM records and knowledge articles can start without a separate data program, but Data Cloud is how you bring in data from outside Salesforce and unify identities. I scope it based on where the answers actually live.</p></div><div class="faq-item"><h3>How do you keep the agent from making things up?</h3><p>Tight topic scoping, instructions that require grounding before answering, the Einstein Trust Layer, guardrails on out-of-scope requests, and a human handoff that is easy to reach. Then test with real transcripts before launch.</p></div><div class="faq-item"><h3>Can Agentforce work on voice?</h3><p>Yes. I build Agentforce Voice agents and expose them on the phone channel through Service Cloud Voice with partner telephony, or on Agentforce Contact Center, Salesforce&#x27;s newer native telephony. I recommend proving topics on chat and messaging first, then extending the same agent to voice, where it replaces IVR menus intent by intent.</p></div></div></div></section>
+<section class="tint"><div class="wrap"><div class="sec-head"><span class="eyebrow">Related</span><h2>Go deeper</h2></div><div class="related"><a class="rel-card" href="/salesforce-service-cloud-voice/"><b>Service Cloud Voice</b><span>Telephony integrated with Salesforce, plus Agentforce Voice agents on the phone.</span></a><a class="rel-card" href="/ccaas-migration/"><b>CCaaS migration</b><span>Genesys, Five9, NICE or Avaya to Salesforce, in waves by queue.</span></a><a class="rel-card" href="/ai-deflection-roi-calculator/"><b>AI deflection ROI calculator</b><span>Estimate hours and cost recovered from automating routine contacts.</span></a></div></div></section>
 <section class="cta-band">
   <div class="wrap">
     <h2>Let's talk for 30 minutes.</h2>

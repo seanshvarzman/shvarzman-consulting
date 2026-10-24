@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Salesforce Service Cloud Voice Implementation | Shvarzman</title>
-<meta name="description" content="Service Cloud Voice implementation: Amazon Connect or partner telephony, Omni-Channel routing, transcription and Agentforce. Strategy and hands-on build.">
+<meta name="description" content="Service Cloud Voice and Agentforce Contact Center implementation: partner telephony or Amazon Connect, Omni-Channel routing, Agentforce Voice agents.">
 <link rel="canonical" href="https://shvarzmanconsulting.com/salesforce-service-cloud-voice/">
 <meta property="og:title" content="Salesforce Service Cloud Voice Implementation | Shvarzman">
-<meta property="og:description" content="Service Cloud Voice implementation: Amazon Connect or partner telephony, Omni-Channel routing, transcription and Agentforce. Strategy and hands-on build.">
+<meta property="og:description" content="Service Cloud Voice and Agentforce Contact Center implementation: partner telephony or Amazon Connect, Omni-Channel routing, Agentforce Voice agents.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://shvarzmanconsulting.com/salesforce-service-cloud-voice/">
 <meta property="og:image" content="https://shvarzmanconsulting.com/og-image.png">
@@ -17,7 +17,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:title" content="Salesforce Service Cloud Voice Implementation | Shvarzman">
-<meta name="twitter:description" content="Service Cloud Voice implementation: Amazon Connect or partner telephony, Omni-Channel routing, transcription and Agentforce. Strategy and hands-on build.">
+<meta name="twitter:description" content="Service Cloud Voice and Agentforce Contact Center implementation: partner telephony or Amazon Connect, Omni-Channel routing, Agentforce Voice agents.">
 <meta name="twitter:image" content="https://shvarzmanconsulting.com/og-image.png">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -37,7 +37,7 @@
    "@id": "https://shvarzmanconsulting.com/salesforce-service-cloud-voice/#webpage",
    "url": "https://shvarzmanconsulting.com/salesforce-service-cloud-voice/",
    "name": "Salesforce Service Cloud Voice Implementation Consultant",
-   "description": "Independent consultant for Salesforce Service Cloud Voice: Amazon Connect or partner telephony, Omni-Channel routing, transcription, Agentforce. Strategy and hands-on build from Miami, FL.",
+   "description": "Service Cloud Voice and Agentforce Contact Center implementation: partner telephony or Amazon Connect, Omni-Channel routing, Agentforce Voice agents.",
    "isPartOf": {
     "@id": "https://shvarzmanconsulting.com/#website"
    },
@@ -134,7 +134,7 @@
     "name": "United States"
    },
    "url": "https://shvarzmanconsulting.com/salesforce-service-cloud-voice/",
-   "description": "Independent consultant for Salesforce Service Cloud Voice: Amazon Connect or partner telephony, Omni-Channel routing, transcription, Agentforce. Strategy and hands-on build from Miami, FL."
+   "description": "Service Cloud Voice and Agentforce Contact Center implementation: partner telephony or Amazon Connect, Omni-Channel routing, Agentforce Voice agents."
   },
   {
    "@type": "FAQPage",
@@ -169,7 +169,15 @@
      "name": "Can Agentforce answer calls on Service Cloud Voice?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Yes. Agentforce can handle voice conversations for routine intents and hand off to a human with the transcript and context attached. I treat voice automation as a second phase after routing and the agent console are stable."
+      "text": "Yes. I build Agentforce Voice agents and expose them on the phone channel, through Service Cloud Voice with partner telephony or on Agentforce Contact Center. They handle routine intents in natural language and hand off to a human with the transcript and context attached. I usually stabilize routing and the agent console first, then replace IVR menus with the voice agent intent by intent."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is Agentforce Contact Center?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Salesforce's newer native contact center and telephony offering. It brings calls and Agentforce Voice agents into Salesforce without a separate CCaaS platform. I deliver it alongside Service Cloud Voice with partner telephony; which one fits depends on your existing contracts and how much you want to consolidate."
      }
     },
     {
@@ -195,7 +203,7 @@
       <a href="/#roi">Impact</a>
       <div class="nav-item"><a href="/#services" aria-haspopup="true">Services</a>
         <div class="nav-menu"><div class="nav-menu-inner">
-          <a href="/salesforce-service-cloud-voice/">Service Cloud Voice<small>Telephony inside Salesforce</small></a>
+          <a href="/salesforce-service-cloud-voice/">Service Cloud Voice<small>Telephony and voice agents in Salesforce</small></a>
           <a href="/agentforce/">Agentforce<small>AI agents for service</small></a>
           <a href="/ccaas-migration/">CCaaS migration<small>Genesys, Five9, NICE to Salesforce</small></a>
           <a href="/ai-deflection-roi-calculator/">AI deflection ROI calculator<small>Formula and assumptions</small></a>
@@ -215,14 +223,15 @@
     <div class="crumbs"><a href="/">Home</a><span>/</span><a href="/services/">Services</a><span>/</span>Salesforce Service Cloud Voice Implementation Consultant</div>
     <h1>Service Cloud Voice, implemented by someone who has run the queue</h1>
     <p class="byline">Written by <a href="/about/">Sean Shvarzman</a> · Updated October 2026</p>
-    <p class="lead">Service Cloud Voice puts the phone inside Salesforce, next to every case, chat and email. I design and build it end to end: telephony choice, routing, the agent console, transcription and AI, and the cutover from whatever you run today.</p>
+    <p class="lead">Service Cloud Voice connects a telephony system to Salesforce, so the phone lives next to every case, chat and email. I design and build it end to end: telephony choice, routing, the agent console, transcription, Agentforce Voice agents on the phone line, and the cutover from whatever you run today.</p>
     <div class="cta"><a href="/#book" class="btn btn-primary">Book a free 30-min call</a><a href="/ai-deflection-roi-calculator/" class="btn btn-ghost">Estimate the ROI</a></div>
   </div>
 </section>
 <section class="article"><div class="wrap">
-<h2>What Service Cloud Voice is</h2>
-<p class="def">Service Cloud Voice is Salesforce's native telephony for Service Cloud. Calls are routed by Omni-Channel alongside digital work, answered from a softphone inside the Service Console, transcribed in real time, and stored as Voice Call records on the customer's timeline, so the phone stops being a separate system.</p>
-<p>It ships in three deployment models. Service Cloud Voice with Amazon Connect bundles the telephony from Salesforce. Service Cloud Voice with Partner Telephony from Amazon Connect lets you bring an Amazon Connect instance you already own. Service Cloud Voice with Partner Telephony connects a certified CCaaS platform such as Genesys, NICE CXone, Five9, Talkdesk or Vonage through Salesforce's partner telephony framework. Choosing between them is the first and most consequential decision in the program, and it depends on your contracts, your carrier situation and how much of the IVR you want to rebuild.</p>
+<h2>What Service Cloud Voice / Partner Contact Center is</h2>
+<p class="def">Service Cloud Voice is the integration of a telephony system with Salesforce. The telephony comes from Amazon Connect, bundled by Salesforce, or from a partner contact center platform such as Genesys, NICE CXone, Five9, Talkdesk or Vonage. Either way, calls are routed by Omni-Channel alongside digital work, answered from a softphone inside the Service Console, transcribed in real time, and stored as Voice Call records on the customer's timeline, so the phone stops being a separate system.</p>
+<p>It ships in three deployment models. Service Cloud Voice with Amazon Connect bundles the telephony from Salesforce. Service Cloud Voice with Partner Telephony from Amazon Connect lets you bring an Amazon Connect instance you already own. Service Cloud Voice with Partner Telephony connects a certified partner contact center platform such as Genesys, NICE CXone, Five9, Talkdesk or Vonage through Salesforce's partner telephony framework.</p>
+<p>Salesforce's newer native option is Agentforce Contact Center, which brings telephony and Agentforce Voice agents into Salesforce without a separate CCaaS platform. I deliver both paths: Service Cloud Voice with partner telephony, and Agentforce Contact Center. Choosing between them is the first and most consequential decision in the program, and it depends on your contracts, your carrier situation, and how much of the IVR you intend to replace with a voice agent rather than rebuild.</p>
 
 <h2>When it is the right move</h2>
 <ul>
@@ -238,9 +247,10 @@
 <ul>
   <li><strong>Telephony decision and architecture.</strong> Amazon Connect versus partner telephony, number porting plan, carrier and compliance requirements, recording and retention.</li>
   <li><strong>Routing design.</strong> Queues, skills, presence statuses and capacity rules in Omni-Channel so voice, messaging and cases share one routing model.</li>
-  <li><strong>IVR and contact flows.</strong> Self-service, identification and intent capture in Amazon Connect flows or the partner platform, handing a known customer and a known reason to the agent.</li>
+  <li><strong>IVR replacement and contact flows.</strong> Identification and intent capture in Amazon Connect flows or the partner platform, and, wherever it pays back, an Agentforce Voice agent in place of the menu tree, so callers say what they need instead of pressing 3.</li>
   <li><strong>Agent console.</strong> Softphone, screen pop to the right record, call controls, after-call work automation and quick actions that match how agents actually work.</li>
   <li><strong>Transcription and AI.</strong> Real-time transcription, Einstein Conversation Insights, call summaries, and Agentforce assist for reps grounded in your knowledge base.</li>
+  <li><strong>Agentforce Voice agents on the phone channel.</strong> I build Agentforce Voice AI agents and expose them on the phone line, through Service Cloud Voice with partner telephony or on Agentforce Contact Center, grounded in your knowledge and handing off to a human with the transcript and context.</li>
   <li><strong>Supervisor and reporting.</strong> Omni Supervisor, call monitoring, and the dashboards that track the KPIs we agreed on.</li>
   <li><strong>Cutover.</strong> Wave plan by queue, parallel running, training, hypercare, and a measured handoff.</li>
 </ul>
@@ -265,13 +275,13 @@
 <p class="updated">Typical results across 30+ enterprise programs, comparing operations before transformation with cloud plus AI after. Voice programs usually move handle time first, through screen pop and after-call automation; satisfaction follows as routing and self-service improve. Every engagement sets its own targets up front.</p>
 <h2>Mistakes I see in Service Cloud Voice projects</h2>
 <ul>
-  <li><strong>Rebuilding the old IVR tree one to one.</strong> The point of the move is a shorter path to a human or a resolved self-service intent, not the same menus on new infrastructure.</li>
+  <li><strong>Rebuilding the old IVR tree one to one.</strong> New infrastructure with the same menus is a missed decade. The move is the moment to replace touch-tone trees with a generative AI voice agent that identifies the caller, resolves routine intents in plain language, and routes the rest with context. That is where the phone channel is heading.</li>
   <li><strong>Designing routing for voice alone.</strong> If chats and cases are not in the same Omni-Channel model, supervisors still juggle two systems.</li>
   <li><strong>Leaving transcription on with no plan for it.</strong> Transcripts are only valuable when summaries, next-best-action and knowledge suggestions are wired to them.</li>
   <li><strong>Porting numbers late.</strong> Carrier lead times are measured in weeks and regularly slip go-lives that were otherwise ready.</li>
 </ul>
 </div></section>
-<section id="faq"><div class="wrap"><div class="sec-head"><span class="eyebrow">Questions</span><h2>Frequently asked questions</h2></div><div class="faq-grid"><div class="faq-item"><h3>What is the difference between Service Cloud Voice with Amazon Connect and partner telephony?</h3><p>With Amazon Connect, Salesforce bundles the telephony and you build call flows in Amazon Connect. With partner telephony, your existing certified CCaaS platform, such as Genesys, NICE CXone, Five9 or Talkdesk, handles the calls and connects into Service Cloud through Salesforce&#x27;s partner telephony framework. The first is simpler to own; the second preserves investments you already have.</p></div><div class="faq-item"><h3>How long does a Service Cloud Voice implementation take?</h3><p>A single-site deployment with straightforward routing typically runs eight to sixteen weeks from discovery to first wave go-live. Multi-site programs with complex IVRs, number porting across carriers and compliance recording take longer, and I plan them as waves by queue rather than one cutover.</p></div><div class="faq-item"><h3>Do agents still need a separate phone system?</h3><p>No. The softphone lives in the Service Console. Agents accept calls, see the customer record and prior interactions, and complete after-call work in the same screen as their cases and chats.</p></div><div class="faq-item"><h3>Can Agentforce answer calls on Service Cloud Voice?</h3><p>Yes. Agentforce can handle voice conversations for routine intents and hand off to a human with the transcript and context attached. I treat voice automation as a second phase after routing and the agent console are stable.</p></div><div class="faq-item"><h3>Is this a Salesforce partner engagement?</h3><p>I am an independent consultant, not a reseller. I work directly for you across strategy and build, and alongside your Salesforce account team when licensing is involved.</p></div></div></div></section>
+<section id="faq"><div class="wrap"><div class="sec-head"><span class="eyebrow">Questions</span><h2>Frequently asked questions</h2></div><div class="faq-grid"><div class="faq-item"><h3>What is the difference between Service Cloud Voice with Amazon Connect and partner telephony?</h3><p>With Amazon Connect, Salesforce bundles the telephony and you build call flows in Amazon Connect. With partner telephony, your existing certified CCaaS platform, such as Genesys, NICE CXone, Five9 or Talkdesk, handles the calls and connects into Service Cloud through Salesforce&#x27;s partner telephony framework. The first is simpler to own; the second preserves investments you already have.</p></div><div class="faq-item"><h3>How long does a Service Cloud Voice implementation take?</h3><p>A single-site deployment with straightforward routing typically runs eight to sixteen weeks from discovery to first wave go-live. Multi-site programs with complex IVRs, number porting across carriers and compliance recording take longer, and I plan them as waves by queue rather than one cutover.</p></div><div class="faq-item"><h3>Do agents still need a separate phone system?</h3><p>No. The softphone lives in the Service Console. Agents accept calls, see the customer record and prior interactions, and complete after-call work in the same screen as their cases and chats.</p></div><div class="faq-item"><h3>Can Agentforce answer calls on Service Cloud Voice?</h3><p>Yes. I build Agentforce Voice agents and expose them on the phone channel, through Service Cloud Voice with partner telephony or on Agentforce Contact Center. They handle routine intents in natural language and hand off to a human with the transcript and context attached. I usually stabilize routing and the agent console first, then replace IVR menus with the voice agent intent by intent.</p></div><div class="faq-item"><h3>What is Agentforce Contact Center?</h3><p>Salesforce&#x27;s newer native contact center and telephony offering. It brings calls and Agentforce Voice agents into Salesforce without a separate CCaaS platform. I deliver it alongside Service Cloud Voice with partner telephony; which one fits depends on your existing contracts and how much you want to consolidate.</p></div><div class="faq-item"><h3>Is this a Salesforce partner engagement?</h3><p>I am an independent consultant, not a reseller. I work directly for you across strategy and build, and alongside your Salesforce account team when licensing is involved.</p></div></div></div></section>
 <section class="tint"><div class="wrap"><div class="sec-head"><span class="eyebrow">Related</span><h2>Go deeper</h2></div><div class="related"><a class="rel-card" href="/service-cloud-voice-vs-genesys-cloud/"><b>Service Cloud Voice vs Genesys Cloud</b><span>Where each belongs, and when to run both.</span></a><a class="rel-card" href="/service-cloud-voice-vs-five9/"><b>Service Cloud Voice vs Five9</b><span>The outbound question, and what it decides.</span></a><a class="rel-card" href="/service-cloud-voice-vs-nice-cxone/"><b>Service Cloud Voice vs NICE CXone</b><span>Workforce engagement versus one agent desktop.</span></a></div></div></section>
 <section class="cta-band">
   <div class="wrap">

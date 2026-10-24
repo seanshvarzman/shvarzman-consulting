@@ -177,7 +177,7 @@
      "name": "What happens to our IVR?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "It is redesigned, not copied. Most legacy IVRs are longer than they need to be. The new flow identifies the customer and the reason quickly, resolves what self-service can, and routes the rest to the right skill with context."
+      "text": "It is redesigned or replaced, not copied. Most legacy IVRs are longer than they need to be. Where a voice agent pays back, callers simply say what they need: the Agentforce Voice agent identifies them, resolves routine intents and routes the rest with context. Where it does not yet, a short intent-first flow does the identification and routing."
      }
     }
    ]
@@ -195,7 +195,7 @@
       <a href="/#roi">Impact</a>
       <div class="nav-item"><a href="/#services" aria-haspopup="true">Services</a>
         <div class="nav-menu"><div class="nav-menu-inner">
-          <a href="/salesforce-service-cloud-voice/">Service Cloud Voice<small>Telephony inside Salesforce</small></a>
+          <a href="/salesforce-service-cloud-voice/">Service Cloud Voice<small>Telephony and voice agents in Salesforce</small></a>
           <a href="/agentforce/">Agentforce<small>AI agents for service</small></a>
           <a href="/ccaas-migration/">CCaaS migration<small>Genesys, Five9, NICE to Salesforce</small></a>
           <a href="/ai-deflection-roi-calculator/">AI deflection ROI calculator<small>Formula and assumptions</small></a>
@@ -221,8 +221,8 @@
 </section>
 <section class="article"><div class="wrap">
 <h2>What a CCaaS migration to Salesforce involves</h2>
-<p class="def">A CCaaS migration to Salesforce replaces or integrates your contact center platform so that calls, messaging and cases are routed, handled and reported in Service Cloud. The telephony lands on Service Cloud Voice, either bundled Amazon Connect or your existing platform through partner telephony. The agent desktop becomes the Service Console. IVRs, queues, skills, recordings and reports are redesigned rather than copied.</p>
-<p>The two big architectural choices are whether to keep the existing CCaaS as the telephony layer under Salesforce or to retire it, and whether to rebuild the IVR as a shorter, intent-first flow or preserve it during the move. Everything else, from number porting to agent training, follows from those two.</p>
+<p class="def">A CCaaS migration to Salesforce replaces or integrates your contact center platform so that calls, messaging and cases are routed, handled and reported in Service Cloud. The telephony lands on Service Cloud Voice, either bundled Amazon Connect or your existing platform through partner telephony, or on Agentforce Contact Center, Salesforce's newer native option. The agent desktop becomes the Service Console. IVRs, queues, skills, recordings and reports are redesigned rather than copied, and menu trees are increasingly replaced by Agentforce Voice agents.</p>
+<p>The two big architectural choices are whether to keep the existing CCaaS as the telephony layer under Salesforce or to retire it, and whether to rebuild the IVR as a shorter, intent-first flow or replace it with a generative AI voice agent that lets callers say what they need. Everything else, from number porting to agent training, follows from those two.</p>
 
 <h2>Platforms I migrate from</h2>
 <div class="table-wrap"><table class="kpi-table">
@@ -242,7 +242,7 @@
 <ul>
   <li><strong>Assessment.</strong> Inventory of queues, skills, IVR branches, integrations, recordings, reports, WFM and compliance rules, with volumes behind each.</li>
   <li><strong>Target architecture.</strong> Service Cloud Voice model, Omni-Channel routing design, data and identity flow, reporting parity, and what gets retired when.</li>
-  <li><strong>IVR and self-service redesign.</strong> Intent-first flows that identify the customer and the reason, with Agentforce where it pays back.</li>
+  <li><strong>IVR replacement and self-service redesign.</strong> Intent-first flows that identify the customer and the reason, and an Agentforce Voice agent in place of the menu tree wherever it pays back.</li>
   <li><strong>Build and integration.</strong> Routing, console, CTI, recording, WFM and quality integrations, dashboards.</li>
   <li><strong>Wave cutover.</strong> Migration by queue, parallel running, number porting coordinated with carriers, training, hypercare and a measured handoff.</li>
   <li><strong>Decommission.</strong> Contract exits and shutting down the old platform without losing recordings or history you are required to keep.</li>
@@ -274,7 +274,7 @@
   <li><strong>Training on screenshots.</strong> Agents need the real console with real queues in a sandbox weeks before their wave.</li>
 </ul>
 </div></section>
-<section id="faq"><div class="wrap"><div class="sec-head"><span class="eyebrow">Questions</span><h2>Frequently asked questions</h2></div><div class="faq-grid"><div class="faq-item"><h3>Should we keep our CCaaS as the telephony layer or replace it?</h3><p>If your contract has time left and the platform&#x27;s telephony is solid, keeping it as partner telephony under Service Cloud Voice gets agents into one console sooner. If the contract is ending or you want one vendor, Service Cloud Voice with Amazon Connect removes a platform. I model both with your contract dates and volumes before recommending.</p></div><div class="faq-item"><h3>How long does a CCaaS migration to Salesforce take?</h3><p>A single-site migration with a modest IVR typically runs three to six months from assessment to final wave. Multi-site, multi-carrier programs with compliance recording run longer, and the wave plan is built around porting lead times and seasonal peaks.</p></div><div class="faq-item"><h3>Do we lose call recordings and reports from the old system?</h3><p>Not if it is planned. Recordings are archived or retained per your compliance rules, historical reports are preserved as exports or in a warehouse, and new reporting is built to match the metrics supervisors already use before the first wave.</p></div><div class="faq-item"><h3>Can we migrate in phases?</h3><p>Yes, and you should. I migrate by queue or business unit, run the old and new platforms in parallel for each wave, and move the next group only when the agreed KPIs hold.</p></div><div class="faq-item"><h3>What happens to our IVR?</h3><p>It is redesigned, not copied. Most legacy IVRs are longer than they need to be. The new flow identifies the customer and the reason quickly, resolves what self-service can, and routes the rest to the right skill with context.</p></div></div></div></section>
+<section id="faq"><div class="wrap"><div class="sec-head"><span class="eyebrow">Questions</span><h2>Frequently asked questions</h2></div><div class="faq-grid"><div class="faq-item"><h3>Should we keep our CCaaS as the telephony layer or replace it?</h3><p>If your contract has time left and the platform&#x27;s telephony is solid, keeping it as partner telephony under Service Cloud Voice gets agents into one console sooner. If the contract is ending or you want one vendor, Service Cloud Voice with Amazon Connect removes a platform. I model both with your contract dates and volumes before recommending.</p></div><div class="faq-item"><h3>How long does a CCaaS migration to Salesforce take?</h3><p>A single-site migration with a modest IVR typically runs three to six months from assessment to final wave. Multi-site, multi-carrier programs with compliance recording run longer, and the wave plan is built around porting lead times and seasonal peaks.</p></div><div class="faq-item"><h3>Do we lose call recordings and reports from the old system?</h3><p>Not if it is planned. Recordings are archived or retained per your compliance rules, historical reports are preserved as exports or in a warehouse, and new reporting is built to match the metrics supervisors already use before the first wave.</p></div><div class="faq-item"><h3>Can we migrate in phases?</h3><p>Yes, and you should. I migrate by queue or business unit, run the old and new platforms in parallel for each wave, and move the next group only when the agreed KPIs hold.</p></div><div class="faq-item"><h3>What happens to our IVR?</h3><p>It is redesigned or replaced, not copied. Most legacy IVRs are longer than they need to be. Where a voice agent pays back, callers simply say what they need: the Agentforce Voice agent identifies them, resolves routine intents and routes the rest with context. Where it does not yet, a short intent-first flow does the identification and routing.</p></div></div></div></section>
 <section class="tint"><div class="wrap"><div class="sec-head"><span class="eyebrow">Related</span><h2>Go deeper</h2></div><div class="related"><a class="rel-card" href="/service-cloud-voice-vs-genesys-cloud/"><b>Service Cloud Voice vs Genesys Cloud</b><span>Where each belongs, and when to run both.</span></a><a class="rel-card" href="/service-cloud-voice-vs-five9/"><b>Service Cloud Voice vs Five9</b><span>The outbound question, and what it decides.</span></a><a class="rel-card" href="/service-cloud-voice-vs-nice-cxone/"><b>Service Cloud Voice vs NICE CXone</b><span>Workforce engagement versus one agent desktop.</span></a></div></div></section>
 <section class="cta-band">
   <div class="wrap">
