@@ -3,17 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Agentforce Implementation for Customer Service | Shvarzman Consulting</title>
-<meta name="description" content="Agentforce consultant for service teams: autonomous AI agents on chat, messaging and voice, grounded in your CRM and knowledge, with human handoff. Strategy and hands-on build from Miami, FL.">
+<title>Agentforce Implementation for Customer Service | Shvarzman</title>
+<meta name="description" content="Agentforce for customer service: autonomous AI agents on chat, messaging and voice, grounded in your CRM and knowledge, with a clean human handoff.">
 <link rel="canonical" href="https://shvarzmanconsulting.com/agentforce/">
-<meta property="og:title" content="Agentforce Implementation for Customer Service | Shvarzman Consulting">
-<meta property="og:description" content="Agentforce consultant for service teams: autonomous AI agents on chat, messaging and voice, grounded in your CRM and knowledge, with human handoff. Strategy and hands-on build from Miami, FL.">
+<meta property="og:title" content="Agentforce Implementation for Customer Service | Shvarzman">
+<meta property="og:description" content="Agentforce for customer service: autonomous AI agents on chat, messaging and voice, grounded in your CRM and knowledge, with a clean human handoff.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://shvarzmanconsulting.com/agentforce/">
 <meta property="og:image" content="https://shvarzmanconsulting.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="apple-touch-icon" href="/favicon.svg">
+<meta name="author" content="Sean Shvarzman">
 <meta name="theme-color" content="#1E3A5F">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +36,7 @@
    "about": {
     "@id": "https://shvarzmanconsulting.com/#org"
    },
-   "dateModified": "2026-10-21",
+   "dateModified": "2026-10-24",
    "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -52,13 +53,45 @@
       "item": "https://shvarzmanconsulting.com/agentforce/"
      }
     ]
+   },
+   "author": {
+    "@id": "https://shvarzmanconsulting.com/#sean"
+   },
+   "datePublished": "2026-10-21",
+   "inLanguage": "en-US"
+  },
+  {
+   "@type": "ProfessionalService",
+   "@id": "https://shvarzmanconsulting.com/#org",
+   "name": "Shvarzman Consulting",
+   "url": "https://shvarzmanconsulting.com/",
+   "telephone": "+1-305-746-8405",
+   "email": "sean@shvarzmanconsulting.com",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Miami",
+    "addressRegion": "FL",
+    "addressCountry": "US"
+   },
+   "sameAs": [
+    "https://www.linkedin.com/in/sean-shvarzman-733a7818a/"
+   ],
+   "founder": {
+    "@id": "https://shvarzmanconsulting.com/#sean"
    }
   },
   {
-   "@type": "Organization",
-   "@id": "https://shvarzmanconsulting.com/#org",
-   "name": "Shvarzman Consulting",
-   "url": "https://shvarzmanconsulting.com/"
+   "@type": "Person",
+   "@id": "https://shvarzmanconsulting.com/#sean",
+   "name": "Sean Shvarzman",
+   "jobTitle": "Contact Center, AI & Salesforce Consultant",
+   "url": "https://shvarzmanconsulting.com/#about",
+   "worksFor": {
+    "@id": "https://shvarzmanconsulting.com/#org"
+   },
+   "sameAs": [
+    "https://www.linkedin.com/in/sean-shvarzman-733a7818a/"
+   ]
   },
   {
    "@type": "WebSite",
@@ -137,7 +170,15 @@
     <a href="/" class="brand"><span class="mark">SS</span> Shvarzman Consulting</a>
     <nav class="nav-links">
       <a href="/#roi">Impact</a>
-      <a href="/#services">Services</a>
+      <div class="nav-item"><a href="/#services">Services</a>
+        <div class="nav-menu"><div class="nav-menu-inner">
+          <a href="/salesforce-service-cloud-voice/">Service Cloud Voice<small>Telephony inside Salesforce</small></a>
+          <a href="/agentforce/">Agentforce<small>AI agents for service</small></a>
+          <a href="/ccaas-migration/">CCaaS migration<small>Genesys, Five9, NICE to Salesforce</small></a>
+          <a href="/ai-deflection-roi-calculator/">AI deflection ROI calculator<small>Formula and assumptions</small></a>
+          <a class="all" href="/#services">All services</a>
+        </div></div>
+      </div>
       <a href="/#process">How I work</a>
       <a href="/#about">About</a>
       <a href="/#clients">Clients</a>
@@ -150,6 +191,7 @@
   <div class="wrap">
     <div class="crumbs"><a href="/">Home</a><span>/</span><a href="/#services">Services</a><span>/</span>Agentforce Implementation for Customer Service</div>
     <h1>Agentforce for service, built to deflect what should be deflected and hand off the rest</h1>
+    <p class="byline">Written by <a href="/#about">Sean Shvarzman</a> · Updated October 2026</p>
     <p class="lead">Agentforce is Salesforce&#x27;s platform for autonomous AI agents. Done well, it resolves routine contacts on its own, assists agents on the rest, and leaves the customer better off. I scope the intents, ground the agent in your data, build it, and measure what it actually resolves.</p>
     <div class="cta"><a href="/#book" class="btn btn-primary">Book a free 30-min call</a><a href="/ai-deflection-roi-calculator/" class="btn btn-ghost">Estimate the ROI</a></div>
   </div>
@@ -166,7 +208,8 @@
   <li>After-hours volume that today waits for the morning queue.</li>
   <li>Agent after-call work that is mostly summarizing what was just said.</li>
 </ul>
-<p>Where it does not pay back: intents that need judgment or empathy first, processes that are not defined well enough for a human to follow consistently, and knowledge bases that are out of date. Fixing those is part of the work, not a reason to skip it.</p>
+<h3>Where it does not pay back</h3>
+<p>Intents that need judgment or empathy first, processes that are not defined well enough for a human to follow consistently, and knowledge bases that are out of date. Fixing those is part of the work, not a reason to skip it.</p>
 
 <h2>What I deliver</h2>
 <ul>
@@ -180,11 +223,11 @@
 
 <h2>How the engagement runs</h2>
 <div class="steps">
-  <div class="step"><b>1 · LEARN</b><span>The business, the queues, the systems behind them, and what agents actually do all day.</span></div>
-  <div class="step"><b>2 · DEFINE</b><span>Success in real KPIs agreed up front: handle time, first-contact resolution, deflection, CSAT.</span></div>
-  <div class="step"><b>3 · BUILD</b><span>Working software on platform best practices, directing developers or in the build myself.</span></div>
-  <div class="step"><b>4 · TRACK</b><span>The agreed numbers, measured after go-live, not a slide.</span></div>
-  <div class="step"><b>5 · IMPROVE</b><span>Run the loop again on what the data shows.</span></div>
+  <div class="step"><b>1 · LEARN</b><span>Contact reasons from real data, knowledge quality, and where humans add judgment.</span></div>
+  <div class="step"><b>2 · DEFINE</b><span>Resolution rate and CSAT per topic, plus a deflection target that is conservative on purpose.</span></div>
+  <div class="step"><b>3 · BUILD</b><span>First topics, actions, guardrails and handoff, tested against real transcripts.</span></div>
+  <div class="step"><b>4 · TRACK</b><span>Resolution, not containment, measured weekly per topic.</span></div>
+  <div class="step"><b>5 · IMPROVE</b><span>Widen scope only when the first topics hold their numbers.</span></div>
 </div>
 <h2>Typical results</h2>
 <div class="table-wrap"><table class="kpi-table">
@@ -195,7 +238,7 @@
     <tr><td>First-contact resolution</td><td>58%</td><td><b>75%+</b></td></tr>
     <tr><td>Systems on the agent desktop</td><td>7+</td><td><b>One console + AI</b></td></tr>
   </tbody></table></div>
-<p class="updated">Typical results across 30+ enterprise programs, comparing operations before transformation with cloud plus AI after. Every engagement sets its own targets up front.</p>
+<p class="updated">Typical results across 30+ enterprise programs, comparing operations before transformation with cloud plus AI after. Deflection shows up first as freed agent hours; resolution rate and satisfaction on automated conversations are the numbers that decide whether to widen scope. Every engagement sets its own targets up front.</p>
 <h2>Mistakes I see in Agentforce programs</h2>
 <ul>
   <li><strong>Starting with every intent.</strong> The first release should cover a handful of high-volume, low-risk topics and prove resolution before widening.</li>

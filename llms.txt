@@ -1,0 +1,16 @@
+# Shvarzman Consulting
+
+> Independent contact center, AI and Salesforce consultancy based in Miami, FL, founded by Sean Shvarzman. Strategy, architecture and hands-on delivery of Salesforce Service Cloud, Service Cloud Voice, Agentforce AI and CCaaS transformations for US enterprises. 30+ enterprise CX programs, $30M+ in service transformations architected and delivered.
+
+## Pages
+
+- [Home](https://shvarzmanconsulting.com/): services, how I work, typical results, FAQ and a free 30-minute discovery call.
+- [Salesforce Service Cloud Voice implementation](https://shvarzmanconsulting.com/salesforce-service-cloud-voice/): what Service Cloud Voice is, the three deployment models, what I deliver, typical results, FAQ.
+- [Agentforce implementation for customer service](https://shvarzmanconsulting.com/agentforce/): what Agentforce is, where it pays back, scoping, grounding, measurement, FAQ.
+- [CCaaS migration to Salesforce](https://shvarzmanconsulting.com/ccaas-migration/): migrating from Genesys, Five9, NICE CXone, Avaya or Amazon Connect, wave cutover, FAQ.
+- [AI call deflection ROI calculator](https://shvarzmanconsulting.com/ai-deflection-roi-calculator/): formula, assumptions (30% deflection of routine contacts, $35 fully loaded hourly cost) and how to build a real business case.
+
+## Contact
+
+- Sean Shvarzman, sean@shvarzmanconsulting.com, +1 305 746 8405, Miami, FL
+- LinkedIn: https://www.linkedin.com/in/sean-shvarzman-733a7818a/

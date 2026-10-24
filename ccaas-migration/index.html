@@ -3,17 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CCaaS Migration to Salesforce Service Cloud | Shvarzman Consulting</title>
-<meta name="description" content="Migrating from Genesys, Five9, NICE CXone, Avaya or Amazon Connect to Salesforce Service Cloud and Service Cloud Voice. Assessment, target architecture, IVR rebuild, wave cutover. Consultant based in Miami, FL.">
+<title>CCaaS Migration to Salesforce Service Cloud | Shvarzman</title>
+<meta name="description" content="Migrate from Genesys, Five9, NICE CXone, Avaya or Amazon Connect to Salesforce Service Cloud Voice: assessment, IVR redesign, wave cutover by queue.">
 <link rel="canonical" href="https://shvarzmanconsulting.com/ccaas-migration/">
-<meta property="og:title" content="CCaaS Migration to Salesforce Service Cloud | Shvarzman Consulting">
-<meta property="og:description" content="Migrating from Genesys, Five9, NICE CXone, Avaya or Amazon Connect to Salesforce Service Cloud and Service Cloud Voice. Assessment, target architecture, IVR rebuild, wave cutover. Consultant based in Miami, FL.">
+<meta property="og:title" content="CCaaS Migration to Salesforce Service Cloud | Shvarzman">
+<meta property="og:description" content="Migrate from Genesys, Five9, NICE CXone, Avaya or Amazon Connect to Salesforce Service Cloud Voice: assessment, IVR redesign, wave cutover by queue.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://shvarzmanconsulting.com/ccaas-migration/">
 <meta property="og:image" content="https://shvarzmanconsulting.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="apple-touch-icon" href="/favicon.svg">
+<meta name="author" content="Sean Shvarzman">
 <meta name="theme-color" content="#1E3A5F">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +36,7 @@
    "about": {
     "@id": "https://shvarzmanconsulting.com/#org"
    },
-   "dateModified": "2026-10-21",
+   "dateModified": "2026-10-24",
    "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -52,13 +53,45 @@
       "item": "https://shvarzmanconsulting.com/ccaas-migration/"
      }
     ]
+   },
+   "author": {
+    "@id": "https://shvarzmanconsulting.com/#sean"
+   },
+   "datePublished": "2026-10-21",
+   "inLanguage": "en-US"
+  },
+  {
+   "@type": "ProfessionalService",
+   "@id": "https://shvarzmanconsulting.com/#org",
+   "name": "Shvarzman Consulting",
+   "url": "https://shvarzmanconsulting.com/",
+   "telephone": "+1-305-746-8405",
+   "email": "sean@shvarzmanconsulting.com",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Miami",
+    "addressRegion": "FL",
+    "addressCountry": "US"
+   },
+   "sameAs": [
+    "https://www.linkedin.com/in/sean-shvarzman-733a7818a/"
+   ],
+   "founder": {
+    "@id": "https://shvarzmanconsulting.com/#sean"
    }
   },
   {
-   "@type": "Organization",
-   "@id": "https://shvarzmanconsulting.com/#org",
-   "name": "Shvarzman Consulting",
-   "url": "https://shvarzmanconsulting.com/"
+   "@type": "Person",
+   "@id": "https://shvarzmanconsulting.com/#sean",
+   "name": "Sean Shvarzman",
+   "jobTitle": "Contact Center, AI & Salesforce Consultant",
+   "url": "https://shvarzmanconsulting.com/#about",
+   "worksFor": {
+    "@id": "https://shvarzmanconsulting.com/#org"
+   },
+   "sameAs": [
+    "https://www.linkedin.com/in/sean-shvarzman-733a7818a/"
+   ]
   },
   {
    "@type": "WebSite",
@@ -137,7 +170,15 @@
     <a href="/" class="brand"><span class="mark">SS</span> Shvarzman Consulting</a>
     <nav class="nav-links">
       <a href="/#roi">Impact</a>
-      <a href="/#services">Services</a>
+      <div class="nav-item"><a href="/#services">Services</a>
+        <div class="nav-menu"><div class="nav-menu-inner">
+          <a href="/salesforce-service-cloud-voice/">Service Cloud Voice<small>Telephony inside Salesforce</small></a>
+          <a href="/agentforce/">Agentforce<small>AI agents for service</small></a>
+          <a href="/ccaas-migration/">CCaaS migration<small>Genesys, Five9, NICE to Salesforce</small></a>
+          <a href="/ai-deflection-roi-calculator/">AI deflection ROI calculator<small>Formula and assumptions</small></a>
+          <a class="all" href="/#services">All services</a>
+        </div></div>
+      </div>
       <a href="/#process">How I work</a>
       <a href="/#about">About</a>
       <a href="/#clients">Clients</a>
@@ -150,6 +191,7 @@
   <div class="wrap">
     <div class="crumbs"><a href="/">Home</a><span>/</span><a href="/#services">Services</a><span>/</span>CCaaS Migration to Salesforce Service Cloud</div>
     <h1>CCaaS migration to Salesforce without the go-live weekend nobody sleeps through</h1>
+    <p class="byline">Written by <a href="/#about">Sean Shvarzman</a> · Updated October 2026</p>
     <p class="lead">Moving a contact center from Genesys, Five9, NICE CXone, Avaya or a standalone Amazon Connect onto Salesforce is mostly a routing, IVR and change problem, not a software problem. I plan it as waves by queue, keep reporting whole, and cut over when the numbers say so.</p>
     <div class="cta"><a href="/#book" class="btn btn-primary">Book a free 30-min call</a><a href="/ai-deflection-roi-calculator/" class="btn btn-ghost">Estimate the ROI</a></div>
   </div>
@@ -160,13 +202,18 @@
 <p>The two big architectural choices are whether to keep the existing CCaaS as the telephony layer under Salesforce or to retire it, and whether to rebuild the IVR as a shorter, intent-first flow or preserve it during the move. Everything else, from number porting to agent training, follows from those two.</p>
 
 <h2>Platforms I migrate from</h2>
-<ul>
-  <li><strong>Genesys Cloud and Genesys Engage</strong>: often kept as partner telephony first, then consolidated.</li>
-  <li><strong>Five9</strong>: common for outbound-heavy teams; dialer needs decide the target design.</li>
-  <li><strong>NICE CXone</strong>: workforce management and quality integrations need a parity plan.</li>
-  <li><strong>Avaya and Cisco on-premise</strong>: carrier, recording and compliance retention usually drive the timeline.</li>
-  <li><strong>Standalone Amazon Connect</strong>: the smoothest path, since Service Cloud Voice can attach to the instance you already own.</li>
-</ul>
+<div class="table-wrap"><table class="kpi-table">
+  <thead><tr><th>Coming from</th><th>Typical telephony decision</th><th>What usually drives the timeline</th></tr></thead>
+  <tbody>
+    <tr><td><b>Genesys Cloud / Engage</b></td><td>Keep as partner telephony first, consolidate later</td><td>Contract dates, IVR depth, WFM integration</td></tr>
+    <tr><td><b>Five9</b></td><td>Depends on outbound dialer needs</td><td>Campaign and dialer parity</td></tr>
+    <tr><td><b>NICE CXone</b></td><td>Partner telephony or Amazon Connect</td><td>Workforce management and quality parity</td></tr>
+    <tr><td><b>Avaya / Cisco on-premise</b></td><td>Usually Amazon Connect</td><td>Carrier porting, recording retention, compliance</td></tr>
+    <tr><td><b>Standalone Amazon Connect</b></td><td>Attach Service Cloud Voice to the instance you own</td><td>Routing redesign; smoothest path of the five</td></tr>
+  </tbody></table></div>
+<p>The decision column is the usual starting point, not a rule. Contract dates and what the current platform does well decide it in practice.</p>
+<h3>When a migration is the wrong first move</h3>
+<p>If the service team is not on Salesforce yet, or the current CCaaS contract has years left and the platform works, a full migration is not where to start. Fixing routing, IVR length and the agent desktop in place usually pays back sooner, and it makes the eventual move smaller. I will say which situation you are in during the first call.</p>
 
 <h2>What I deliver</h2>
 <ul>
@@ -180,11 +227,11 @@
 
 <h2>How the engagement runs</h2>
 <div class="steps">
-  <div class="step"><b>1 · LEARN</b><span>The business, the queues, the systems behind them, and what agents actually do all day.</span></div>
-  <div class="step"><b>2 · DEFINE</b><span>Success in real KPIs agreed up front: handle time, first-contact resolution, deflection, CSAT.</span></div>
-  <div class="step"><b>3 · BUILD</b><span>Working software on platform best practices, directing developers or in the build myself.</span></div>
-  <div class="step"><b>4 · TRACK</b><span>The agreed numbers, measured after go-live, not a slide.</span></div>
-  <div class="step"><b>5 · IMPROVE</b><span>Run the loop again on what the data shows.</span></div>
+  <div class="step"><b>1 · ASSESS</b><span>Every queue, skill, IVR branch, integration, report and retention rule, with volumes attached.</span></div>
+  <div class="step"><b>2 · DEFINE</b><span>Reporting parity and the KPIs each wave must hold before the next one moves.</span></div>
+  <div class="step"><b>3 · MIGRATE</b><span>Wave one by queue, in parallel with the old platform, numbers ported on the carrier's calendar.</span></div>
+  <div class="step"><b>4 · TRACK</b><span>Wave KPIs against the baseline from the old system.</span></div>
+  <div class="step"><b>5 · NEXT WAVE</b><span>Move the next group only when the numbers hold, then decommission.</span></div>
 </div>
 <h2>Typical results</h2>
 <div class="table-wrap"><table class="kpi-table">
@@ -195,7 +242,7 @@
     <tr><td>First-contact resolution</td><td>58%</td><td><b>75%+</b></td></tr>
     <tr><td>Systems on the agent desktop</td><td>7+</td><td><b>One console + AI</b></td></tr>
   </tbody></table></div>
-<p class="updated">Typical results across 30+ enterprise programs, comparing operations before transformation with cloud plus AI after. Every engagement sets its own targets up front.</p>
+<p class="updated">Typical results across 30+ enterprise programs, comparing operations before transformation with cloud plus AI after. Migrations usually show the desktop effect first, one console instead of seven systems, then handle time as routing and screen pop settle in. Every engagement sets its own targets up front.</p>
 <h2>Where migrations go wrong</h2>
 <ul>
   <li><strong>One big-bang cutover.</strong> Waves by queue let you fix routing on a small group before the whole floor is on the new desktop.</li>
