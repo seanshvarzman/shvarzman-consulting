@@ -10,10 +10,10 @@
 - [CCaaS migration to Salesforce](https://shvarzmanconsulting.com/ccaas-migration/): migrating from Genesys, Five9, NICE CXone, Avaya or Amazon Connect, wave cutover, FAQ.
 - [AI call deflection ROI calculator](https://shvarzmanconsulting.com/ai-deflection-roi-calculator/): formula, assumptions (30% deflection of routine contacts, $35 fully loaded hourly cost) and how to build a real business case.
 
-- [All services](https://shvarzmanconsulting.com/services/): engagement types, services, comparisons and tools.
-- [Service Cloud Voice vs Genesys Cloud](https://shvarzmanconsulting.com/service-cloud-voice-vs-genesys-cloud/): where each belongs, when to run both, migration path, demo script.
-- [Service Cloud Voice vs Five9](https://shvarzmanconsulting.com/service-cloud-voice-vs-five9/): the outbound question, when Five9 stays underneath, demo script.
-- [Service Cloud Voice vs NICE CXone](https://shvarzmanconsulting.com/service-cloud-voice-vs-nice-cxone/): workforce engagement versus one desktop, parity, demo script.
+- [All services](https://shvarzmanconsulting.com/services/): engagement types, services, platform guides and tools.
+- [Genesys Cloud with Service Cloud Voice](https://shvarzmanconsulting.com/genesys-cloud-with-service-cloud-voice/): four ways to run Genesys with Salesforce, from partner telephony under Service Cloud Voice to consolidation, and how to decide.
+- [Five9 with Service Cloud Voice](https://shvarzmanconsulting.com/five9-with-service-cloud-voice/): inbound in Salesforce, when the dialer keeps Five9 in place, and when to consolidate.
+- [NICE CXone with Service Cloud Voice](https://shvarzmanconsulting.com/nice-cxone-with-service-cloud-voice/): keep workforce engagement under Service Cloud Voice, move the desktop, or consolidate.
 - [About Sean Shvarzman](https://shvarzmanconsulting.com/about/): background, how I work, platforms, industries and clients.
 
 ## Contact
