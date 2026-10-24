@@ -379,3 +379,10 @@
   .byline{font-size:.9rem;color:var(--slate-soft);margin:10px 0 0}
   .byline a{color:var(--steel);font-weight:600}
   .byline a:hover{color:var(--azure)}
+
+  .skip{position:absolute;left:-9999px;top:8px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:10px;z-index:100}
+.skip:focus{left:12px}
+.about-grid{display:grid;grid-template-columns:200px 1fr;gap:32px;align-items:start;margin-bottom:8px}
+.about-photo-page{width:200px;height:200px;border-radius:20px;object-fit:cover;box-shadow:var(--shadow)}
+.related-1{grid-template-columns:minmax(0,1fr);max-width:520px;margin:0 auto}
+@media(max-width:720px){.about-grid{grid-template-columns:1fr}.about-photo-page{width:140px;height:140px}}

@@ -12,6 +12,14 @@
 <meta property="og:url" content="https://shvarzmanconsulting.com/ai-deflection-roi-calculator/">
 <meta property="og:image" content="https://shvarzmanconsulting.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="Shvarzman Consulting">
+<meta property="og:locale" content="en_US">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:title" content="AI Call Deflection ROI Calculator | Shvarzman Consulting">
+<meta name="twitter:description" content="Estimate agent hours and annual cost recovered by deflecting routine contacts with AI. Transparent formula, stated assumptions, and how to use your own numbers.">
+<meta name="twitter:image" content="https://shvarzmanconsulting.com/og-image.png">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="apple-touch-icon" href="/favicon.svg">
 <meta name="author" content="Sean Shvarzman">
@@ -49,6 +57,12 @@
      {
       "@type": "ListItem",
       "position": 2,
+      "name": "Services",
+      "item": "https://shvarzmanconsulting.com/services/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
       "name": "AI Call Deflection ROI Calculator for Contact Centers",
       "item": "https://shvarzmanconsulting.com/ai-deflection-roi-calculator/"
      }
@@ -78,20 +92,28 @@
    ],
    "founder": {
     "@id": "https://shvarzmanconsulting.com/#sean"
-   }
+   },
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://shvarzmanconsulting.com/assets/logo-512.png",
+    "width": 512,
+    "height": 512
+   },
+   "image": "https://shvarzmanconsulting.com/og-image.png"
   },
   {
    "@type": "Person",
    "@id": "https://shvarzmanconsulting.com/#sean",
    "name": "Sean Shvarzman",
    "jobTitle": "Contact Center, AI & Salesforce Consultant",
-   "url": "https://shvarzmanconsulting.com/#about",
+   "url": "https://shvarzmanconsulting.com/about/",
    "worksFor": {
     "@id": "https://shvarzmanconsulting.com/#org"
    },
    "sameAs": [
     "https://www.linkedin.com/in/sean-shvarzman-733a7818a/"
-   ]
+   ],
+   "image": "https://shvarzmanconsulting.com/assets/sean-shvarzman.jpg"
   },
   {
    "@type": "WebSite",
@@ -150,33 +172,34 @@
 </script>
 </head>
 <body class="">
+<a class="skip" href="#main">Skip to content</a>
 <header>
   <div class="wrap nav">
     <a href="/" class="brand"><span class="mark">SS</span> Shvarzman Consulting</a>
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Primary">
       <a href="/#roi">Impact</a>
-      <div class="nav-item"><a href="/#services">Services</a>
+      <div class="nav-item"><a href="/#services" aria-haspopup="true">Services</a>
         <div class="nav-menu"><div class="nav-menu-inner">
           <a href="/salesforce-service-cloud-voice/">Service Cloud Voice<small>Telephony inside Salesforce</small></a>
           <a href="/agentforce/">Agentforce<small>AI agents for service</small></a>
           <a href="/ccaas-migration/">CCaaS migration<small>Genesys, Five9, NICE to Salesforce</small></a>
           <a href="/ai-deflection-roi-calculator/">AI deflection ROI calculator<small>Formula and assumptions</small></a>
-          <a class="all" href="/#services">All services</a>
+          <a class="all" href="/services/">All services and comparisons</a>
         </div></div>
       </div>
       <a href="/#process">How I work</a>
-      <a href="/#about">About</a>
+      <a href="/about/">About</a>
       <a href="/#clients">Clients</a>
       <a href="/#book" class="btn btn-primary">Book a call</a>
     </nav>
   </div>
 </header>
-<main>
+<main id="main">
 <section class="page-hero">
   <div class="wrap">
-    <div class="crumbs"><a href="/">Home</a><span>/</span><a href="/#roi-calc">Tools</a><span>/</span>AI Call Deflection ROI Calculator for Contact Centers</div>
+    <div class="crumbs"><a href="/">Home</a><span>/</span><a href="/services/">Services</a><span>/</span>AI Call Deflection ROI Calculator for Contact Centers</div>
     <h1>What could AI deflection recover for your contact center?</h1>
-    <p class="byline">Written by <a href="/#about">Sean Shvarzman</a> · Updated October 2026</p>
+    <p class="byline">Written by <a href="/about/">Sean Shvarzman</a> · Updated October 2026</p>
     <p class="lead">Three inputs, two outputs, and the formula shown in full. It is a starting point for a conversation, not a business case. The real target is one of the first KPIs we define together.</p>
     <div class="cta"><a href="/#book" class="btn btn-primary">Book a free 30-min call</a><a href="/ai-deflection-roi-calculator/" class="btn btn-ghost">Estimate the ROI</a></div>
   </div>
@@ -231,7 +254,7 @@
   })();
 </script>
 <section id="faq"><div class="wrap"><div class="sec-head"><span class="eyebrow">Questions</span><h2>Frequently asked questions</h2></div><div class="faq-grid"><div class="faq-item"><h3>How is the estimate calculated?</h3><p>Agent hours freed per month equals calls per month, times a 30% deflection rate, times average handle time in minutes, divided by 60. Annual cost recovered equals those hours times a $35 fully loaded hourly cost, times 12 months, rounded to the nearest thousand.</p></div><div class="faq-item"><h3>Why 30% deflection?</h3><p>It is a conservative starting assumption for routine contacts in programs I have delivered. Real rates vary by intent mix, knowledge quality and channel. During discovery we replace it with a target per contact reason.</p></div><div class="faq-item"><h3>Why $35 per hour?</h3><p>It is a rough fully loaded cost for a US contact center agent including wages, benefits, management and tooling. Replace it with your own number for a real estimate; the formula above makes that a one-line change.</p></div><div class="faq-item"><h3>What does the calculator leave out?</h3><p>Licensing and implementation costs, the revenue side of faster service, customer satisfaction effects, and the agent capacity you may redeploy rather than remove. A business case covers all of those; this tool only sizes the labor side of deflection.</p></div><div class="faq-item"><h3>Where do the agents go when hours are freed?</h3><p>In most programs the hours are redeployed to complex work, backlog, sales or outbound rather than removed. Which of those applies to you is a discovery question, and it changes the business case more than the deflection rate does.</p></div></div></div></section>
-<section class="tint"><div class="wrap"><div class="sec-head"><span class="eyebrow">Related</span><h2>Go deeper</h2></div><div class="related"><a class="rel-card" href="/salesforce-service-cloud-voice/"><b>Service Cloud Voice</b><span>Telephony inside Salesforce: routing, console, transcription and AI.</span></a><a class="rel-card" href="/agentforce/"><b>Agentforce</b><span>Autonomous AI agents that resolve routine contacts and assist reps.</span></a><a class="rel-card" href="/ccaas-migration/"><b>CCaaS migration</b><span>Genesys, Five9, NICE or Avaya to Salesforce, in waves by queue.</span></a></div></div></section>
+<section class="tint"><div class="wrap"><div class="sec-head"><span class="eyebrow">Related</span><h2>Go deeper</h2></div><div class="related"><a class="rel-card" href="/agentforce/"><b>Agentforce</b><span>Autonomous AI agents that resolve routine contacts and assist reps.</span></a><a class="rel-card" href="/salesforce-service-cloud-voice/"><b>Service Cloud Voice</b><span>Telephony inside Salesforce: routing, console, transcription and AI.</span></a><a class="rel-card" href="/ccaas-migration/"><b>CCaaS migration</b><span>Genesys, Five9, NICE or Avaya to Salesforce, in waves by queue.</span></a></div></div></section>
 <section class="cta-band">
   <div class="wrap">
     <h2>Let's talk for 30 minutes.</h2>
@@ -244,11 +267,13 @@
   <div class="wrap foot">
     <a href="/" class="brand"><span class="mark">SS</span> Shvarzman Consulting</a>
     <div class="contact">Miami, FL · <a href="mailto:Sean@shvarzmanconsulting.com">Sean@ShvarzmanConsulting.com</a> · (305) 746-8405 · <a href="https://www.linkedin.com/in/sean-shvarzman-733a7818a/" target="_blank" rel="noopener">LinkedIn</a></div>
-    <nav class="foot-links" aria-label="Services">
+    <nav class="foot-links" aria-label="Site">
+      <a href="/services/">All services</a>
       <a href="/salesforce-service-cloud-voice/">Service Cloud Voice</a>
       <a href="/agentforce/">Agentforce</a>
       <a href="/ccaas-migration/">CCaaS migration</a>
-      <a href="/ai-deflection-roi-calculator/">AI deflection ROI calculator</a>
+      <a href="/ai-deflection-roi-calculator/">ROI calculator</a>
+      <a href="/about/">About Sean</a>
     </nav>
   </div>
 </footer>

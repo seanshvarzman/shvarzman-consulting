@@ -12,6 +12,14 @@
 <meta property="og:url" content="https://shvarzmanconsulting.com/ccaas-migration/">
 <meta property="og:image" content="https://shvarzmanconsulting.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="Shvarzman Consulting">
+<meta property="og:locale" content="en_US">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:title" content="CCaaS Migration to Salesforce Service Cloud | Shvarzman">
+<meta name="twitter:description" content="Migrate from Genesys, Five9, NICE CXone, Avaya or Amazon Connect to Salesforce Service Cloud Voice: assessment, IVR redesign, wave cutover by queue.">
+<meta name="twitter:image" content="https://shvarzmanconsulting.com/og-image.png">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="apple-touch-icon" href="/favicon.svg">
 <meta name="author" content="Sean Shvarzman">
@@ -49,6 +57,12 @@
      {
       "@type": "ListItem",
       "position": 2,
+      "name": "Services",
+      "item": "https://shvarzmanconsulting.com/services/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
       "name": "CCaaS Migration to Salesforce Service Cloud",
       "item": "https://shvarzmanconsulting.com/ccaas-migration/"
      }
@@ -78,20 +92,28 @@
    ],
    "founder": {
     "@id": "https://shvarzmanconsulting.com/#sean"
-   }
+   },
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://shvarzmanconsulting.com/assets/logo-512.png",
+    "width": 512,
+    "height": 512
+   },
+   "image": "https://shvarzmanconsulting.com/og-image.png"
   },
   {
    "@type": "Person",
    "@id": "https://shvarzmanconsulting.com/#sean",
    "name": "Sean Shvarzman",
    "jobTitle": "Contact Center, AI & Salesforce Consultant",
-   "url": "https://shvarzmanconsulting.com/#about",
+   "url": "https://shvarzmanconsulting.com/about/",
    "worksFor": {
     "@id": "https://shvarzmanconsulting.com/#org"
    },
    "sameAs": [
     "https://www.linkedin.com/in/sean-shvarzman-733a7818a/"
-   ]
+   ],
+   "image": "https://shvarzmanconsulting.com/assets/sean-shvarzman.jpg"
   },
   {
    "@type": "WebSite",
@@ -165,33 +187,34 @@
 </script>
 </head>
 <body class="">
+<a class="skip" href="#main">Skip to content</a>
 <header>
   <div class="wrap nav">
     <a href="/" class="brand"><span class="mark">SS</span> Shvarzman Consulting</a>
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Primary">
       <a href="/#roi">Impact</a>
-      <div class="nav-item"><a href="/#services">Services</a>
+      <div class="nav-item"><a href="/#services" aria-haspopup="true">Services</a>
         <div class="nav-menu"><div class="nav-menu-inner">
           <a href="/salesforce-service-cloud-voice/">Service Cloud Voice<small>Telephony inside Salesforce</small></a>
           <a href="/agentforce/">Agentforce<small>AI agents for service</small></a>
           <a href="/ccaas-migration/">CCaaS migration<small>Genesys, Five9, NICE to Salesforce</small></a>
           <a href="/ai-deflection-roi-calculator/">AI deflection ROI calculator<small>Formula and assumptions</small></a>
-          <a class="all" href="/#services">All services</a>
+          <a class="all" href="/services/">All services and comparisons</a>
         </div></div>
       </div>
       <a href="/#process">How I work</a>
-      <a href="/#about">About</a>
+      <a href="/about/">About</a>
       <a href="/#clients">Clients</a>
       <a href="/#book" class="btn btn-primary">Book a call</a>
     </nav>
   </div>
 </header>
-<main>
+<main id="main">
 <section class="page-hero">
   <div class="wrap">
-    <div class="crumbs"><a href="/">Home</a><span>/</span><a href="/#services">Services</a><span>/</span>CCaaS Migration to Salesforce Service Cloud</div>
+    <div class="crumbs"><a href="/">Home</a><span>/</span><a href="/services/">Services</a><span>/</span>CCaaS Migration to Salesforce Service Cloud</div>
     <h1>CCaaS migration to Salesforce without the go-live weekend nobody sleeps through</h1>
-    <p class="byline">Written by <a href="/#about">Sean Shvarzman</a> · Updated October 2026</p>
+    <p class="byline">Written by <a href="/about/">Sean Shvarzman</a> · Updated October 2026</p>
     <p class="lead">Moving a contact center from Genesys, Five9, NICE CXone, Avaya or a standalone Amazon Connect onto Salesforce is mostly a routing, IVR and change problem, not a software problem. I plan it as waves by queue, keep reporting whole, and cut over when the numbers say so.</p>
     <div class="cta"><a href="/#book" class="btn btn-primary">Book a free 30-min call</a><a href="/ai-deflection-roi-calculator/" class="btn btn-ghost">Estimate the ROI</a></div>
   </div>
@@ -252,7 +275,7 @@
 </ul>
 </div></section>
 <section id="faq"><div class="wrap"><div class="sec-head"><span class="eyebrow">Questions</span><h2>Frequently asked questions</h2></div><div class="faq-grid"><div class="faq-item"><h3>Should we keep our CCaaS as the telephony layer or replace it?</h3><p>If your contract has time left and the platform&#x27;s telephony is solid, keeping it as partner telephony under Service Cloud Voice gets agents into one console sooner. If the contract is ending or you want one vendor, Service Cloud Voice with Amazon Connect removes a platform. I model both with your contract dates and volumes before recommending.</p></div><div class="faq-item"><h3>How long does a CCaaS migration to Salesforce take?</h3><p>A single-site migration with a modest IVR typically runs three to six months from assessment to final wave. Multi-site, multi-carrier programs with compliance recording run longer, and the wave plan is built around porting lead times and seasonal peaks.</p></div><div class="faq-item"><h3>Do we lose call recordings and reports from the old system?</h3><p>Not if it is planned. Recordings are archived or retained per your compliance rules, historical reports are preserved as exports or in a warehouse, and new reporting is built to match the metrics supervisors already use before the first wave.</p></div><div class="faq-item"><h3>Can we migrate in phases?</h3><p>Yes, and you should. I migrate by queue or business unit, run the old and new platforms in parallel for each wave, and move the next group only when the agreed KPIs hold.</p></div><div class="faq-item"><h3>What happens to our IVR?</h3><p>It is redesigned, not copied. Most legacy IVRs are longer than they need to be. The new flow identifies the customer and the reason quickly, resolves what self-service can, and routes the rest to the right skill with context.</p></div></div></div></section>
-<section class="tint"><div class="wrap"><div class="sec-head"><span class="eyebrow">Related</span><h2>Go deeper</h2></div><div class="related"><a class="rel-card" href="/salesforce-service-cloud-voice/"><b>Service Cloud Voice</b><span>Telephony inside Salesforce: routing, console, transcription and AI.</span></a><a class="rel-card" href="/agentforce/"><b>Agentforce</b><span>Autonomous AI agents that resolve routine contacts and assist reps.</span></a><a class="rel-card" href="/ai-deflection-roi-calculator/"><b>AI deflection ROI calculator</b><span>Estimate hours and cost recovered from automating routine contacts.</span></a></div></div></section>
+<section class="tint"><div class="wrap"><div class="sec-head"><span class="eyebrow">Related</span><h2>Go deeper</h2></div><div class="related"><a class="rel-card" href="/service-cloud-voice-vs-genesys-cloud/"><b>Service Cloud Voice vs Genesys Cloud</b><span>Where each belongs, and when to run both.</span></a><a class="rel-card" href="/service-cloud-voice-vs-five9/"><b>Service Cloud Voice vs Five9</b><span>The outbound question, and what it decides.</span></a><a class="rel-card" href="/service-cloud-voice-vs-nice-cxone/"><b>Service Cloud Voice vs NICE CXone</b><span>Workforce engagement versus one agent desktop.</span></a></div></div></section>
 <section class="cta-band">
   <div class="wrap">
     <h2>Let's talk for 30 minutes.</h2>
@@ -265,11 +288,13 @@
   <div class="wrap foot">
     <a href="/" class="brand"><span class="mark">SS</span> Shvarzman Consulting</a>
     <div class="contact">Miami, FL · <a href="mailto:Sean@shvarzmanconsulting.com">Sean@ShvarzmanConsulting.com</a> · (305) 746-8405 · <a href="https://www.linkedin.com/in/sean-shvarzman-733a7818a/" target="_blank" rel="noopener">LinkedIn</a></div>
-    <nav class="foot-links" aria-label="Services">
+    <nav class="foot-links" aria-label="Site">
+      <a href="/services/">All services</a>
       <a href="/salesforce-service-cloud-voice/">Service Cloud Voice</a>
       <a href="/agentforce/">Agentforce</a>
       <a href="/ccaas-migration/">CCaaS migration</a>
-      <a href="/ai-deflection-roi-calculator/">AI deflection ROI calculator</a>
+      <a href="/ai-deflection-roi-calculator/">ROI calculator</a>
+      <a href="/about/">About Sean</a>
     </nav>
   </div>
 </footer>

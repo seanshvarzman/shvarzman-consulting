@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://shvarzmanconsulting.com/</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://shvarzmanconsulting.com/services/</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://shvarzmanconsulting.com/salesforce-service-cloud-voice/</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://shvarzmanconsulting.com/agentforce/</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://shvarzmanconsulting.com/ccaas-migration/</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://shvarzmanconsulting.com/ai-deflection-roi-calculator/</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://shvarzmanconsulting.com/service-cloud-voice-vs-genesys-cloud/</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://shvarzmanconsulting.com/service-cloud-voice-vs-five9/</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://shvarzmanconsulting.com/service-cloud-voice-vs-nice-cxone/</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://shvarzmanconsulting.com/about/</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

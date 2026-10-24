@@ -10,6 +10,12 @@
 - [CCaaS migration to Salesforce](https://shvarzmanconsulting.com/ccaas-migration/): migrating from Genesys, Five9, NICE CXone, Avaya or Amazon Connect, wave cutover, FAQ.
 - [AI call deflection ROI calculator](https://shvarzmanconsulting.com/ai-deflection-roi-calculator/): formula, assumptions (30% deflection of routine contacts, $35 fully loaded hourly cost) and how to build a real business case.
 
+- [All services](https://shvarzmanconsulting.com/services/): engagement types, services, comparisons and tools.
+- [Service Cloud Voice vs Genesys Cloud](https://shvarzmanconsulting.com/service-cloud-voice-vs-genesys-cloud/): where each belongs, when to run both, migration path, demo script.
+- [Service Cloud Voice vs Five9](https://shvarzmanconsulting.com/service-cloud-voice-vs-five9/): the outbound question, when Five9 stays underneath, demo script.
+- [Service Cloud Voice vs NICE CXone](https://shvarzmanconsulting.com/service-cloud-voice-vs-nice-cxone/): workforce engagement versus one desktop, parity, demo script.
+- [About Sean Shvarzman](https://shvarzmanconsulting.com/about/): background, how I work, platforms, industries and clients.
+
 ## Contact
 
 - Sean Shvarzman, sean@shvarzmanconsulting.com, +1 305 746 8405, Miami, FL
